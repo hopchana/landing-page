@@ -1,0 +1,89 @@
+/*
+
+Desktop
+page heading 30px
+section heading 28 px
+sub heading 22px
+sub sub heading 20px
+paragraph 16px
+
+Mobile
+page heading 20px
+section heading 16px
+sub heading 12px
+sub sub heading 16px
+paragraph 12px
+tag 10px
+
+colors
+#e7e5dd
+#bdbbad
+#999990
+#56514B
+
+*/
+
+body {
+    background: #e7e5dd;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /*width: 50%;*/
+    margin: 0;
+    justify-content: right;
+    /*margin-right: 5%;*/
+    /*background: lightgreen;*/
+}
+
+nav {
+
+}
+
+nav li {
+    padding-top:0.5em;
+    padding-right:5%;
+    padding-bottom:0.8em;
+    padding-left:5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #838367;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+
+}
+
+nav li:hover {
+    background: #bdbbad;
+    transition: 0.65s;
+    a {
+        color: #56514b;
+        transition: 0.65s;
+    }
+
+}
+
+.active {
+    color: #56514b;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #56514b;
+}
+
+section {
+    font-size: 16px;
+    color: #838367;
+}
