@@ -1,0 +1,80 @@
+/*mobile portrait*/
+nav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background: #e7e5dd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    right: 0;
+}
+
+nav a {
+    padding: 0.4em 0.4em 0.4em 12%;
+    text-decoration: none;
+    font-size: 20px;
+    color: #838367;
+    letter-spacing: 3px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #bdbbad;
+    transition: 0.3s;
+    color: #56514b;
+
+}
+
+nav .closeBtn {
+    padding: 0 0.4em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 45px;
+}
+
+nav .closeBtn:hover {
+    background: none;
+}
+
+#openNav {
+    margin-right: 0.5em;
+    font-size:30px;
+    cursor:pointer;
+    text-align:right;
+}
+
+/*mobile: landscape*/
+@media screen and (min-width: 480px) {
+    #openNav, nav .closeBtn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        position: relative;
+        padding: 0;
+        justify-content: right;
+    }
+
+    nav a {
+        padding: 8px;
+    }
+
+    .active {
+        font-weight: bold;
+        color: #56514b;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+}
+
+/*tablet: portrait*/
+@media screen and (min-width: 768px) {
+    nav a {
+        padding: 0.5em 5% 0.8em;
+    }
+}

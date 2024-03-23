@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <title>World on wheels</title>
 </head>
 <body>
-<header>
-<nav>
-    <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="">Ride safe</a></li>
-        <li><a href="">All routes</a></li>
-        <li><a href="">Contacts</a></li>
-    </ul>
+    <div id="openNav" onclick="openNav()">&#9776;</div>
+<nav id="mySidenav">
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+    <a class="active" href="index.html">Home</a>
+    <a href="rideSafe.html">Ride safe</a>
+    <a href="">All routes</a>
+    <a href="">Contacts</a>
 </nav>
-</header><h1>World on wheels</h1>
 <main>
+    <h1>World on wheels</h1>
     <section>
         There is no better way to explore world than on a bicycle. Find picturesque landscapes, historical monuments and cool places travelling on wheels.
     </section>
 </main>
+<script src="js/sidenav.js"></script>
 </body>
 </html>
