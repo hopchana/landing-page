@@ -26,6 +26,7 @@ colors
 body {
     background: #e7e5dd;
     margin: 0 auto;
+    max-width: 98%;
 }
 
 main {
@@ -38,9 +39,11 @@ html {
 
 /*mobile portrait*/
 h1 {
-    font-size: 20px;
+    font-size: 40px;
     color: #56514b;
     margin-top: 0;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.04rem;
 }
 
 section {
@@ -48,18 +51,39 @@ section {
     color: #838367;
 }
 
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+}
+
+
+@media screen and (max-width: 245px) {
+    h1 {
+        font-size: 22px;
+        letter-spacing: 0;
+    }
+}
+
 /*mobile: landscape*/
 @media screen and (min-width: 480px) {
+    main {
+        max-width: 95%;
+        margin: auto;
+    }
     h1 {
-        font-size: 25px;
-        margin-top: 0.67em;
+        font-size: 45px;
+        margin-bottom: 0.4em;
+        letter-spacing: 0.5rem;
     }
 }
 
 /*tablet: portrait*/
 @media screen and (min-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 60px;
+        letter-spacing: 1rem;
     }
     section {
         font-size: 18px;
@@ -68,6 +92,10 @@ section {
 
 /*tablet: landscape, laptop, desktop*/
 @media screen and (min-width: 992px) {
+    h1 {
+        font-size: 70px;
+        letter-spacing: 1.3rem;
+    }
     section {
         font-size: 20px;
     }
@@ -75,10 +103,14 @@ section {
 
 /*large desktop, tv, etc*/
 @media screen and (min-width: 1200px) {
+
     section {
         font-size: 22px;
     }
     body {
         max-width: 1340px;
+    }
+    h1 {
+        letter-spacing: 1.7rem;
     }
 }

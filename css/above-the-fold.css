@@ -19,7 +19,7 @@
     width:100%;
     grid-column: 1;
 }
-#img2-bottom {
+#img2 {
     width:100%;
     grid-column: 2;
 }
@@ -29,7 +29,7 @@
 }
 
 @media screen and (max-width: 320px) {
-    #above-the-fold #img2-bottom {
+    #above-the-fold #img2 {
         display: none;
     }
     #above-the-fold span {
@@ -52,7 +52,6 @@
 
 /*mobile: landscape*/
 @media screen and (min-width: 480px) {
-
     #img3-top, #img3-bottom {
         display: grid;
         width:100%;
