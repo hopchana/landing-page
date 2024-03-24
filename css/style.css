@@ -25,7 +25,7 @@ colors
 
 body {
     background: #e7e5dd;
-    margin: 0;
+    margin: 0 auto;
 }
 
 main {
@@ -38,7 +38,7 @@ html {
 
 /*mobile portrait*/
 h1 {
-    font-size: 30px;
+    font-size: 20px;
     color: #56514b;
     margin-top: 0;
 }
@@ -51,6 +51,34 @@ section {
 /*mobile: landscape*/
 @media screen and (min-width: 480px) {
     h1 {
+        font-size: 25px;
         margin-top: 0.67em;
+    }
+}
+
+/*tablet: portrait*/
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+    section {
+        font-size: 18px;
+    }
+}
+
+/*tablet: landscape, laptop, desktop*/
+@media screen and (min-width: 992px) {
+    section {
+        font-size: 20px;
+    }
+}
+
+/*large desktop, tv, etc*/
+@media screen and (min-width: 1200px) {
+    section {
+        font-size: 22px;
+    }
+    body {
+        max-width: 1340px;
     }
 }
