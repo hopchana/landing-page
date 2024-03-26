@@ -28,7 +28,7 @@ nav a:hover {
 
 }
 
-nav .closeBtn {
+nav .close-nav-btn {
     padding: 0;
     margin: 0 8px;
     position: absolute;
@@ -37,24 +37,24 @@ nav .closeBtn {
     font-size: 45px;
 }
 
-nav .closeBtn:hover {
+nav .close-nav-btn:hover {
     background: none;
 }
 
-#openNav {
+#open-nav {
     margin: 8px;
     font-size:30px;
     cursor:pointer;
 
 }
 
-#navBtn {
+#nav-btn {
     text-align:right;
 }
 
 /*mobile: landscape*/
 @media screen and (min-width: 480px) {
-    #openNav, nav .closeBtn {
+    #open-nav, nav .close-nav-btn {
         display: none;
     }
 

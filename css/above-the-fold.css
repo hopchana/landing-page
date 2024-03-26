@@ -28,7 +28,18 @@
     display: none;
 }
 
-@media screen and (max-width: 320px) {
+/*tiny mobile*/
+@media screen and (max-width: 245px) {
+    #above-the-fold img {
+        display: none;
+    }
+    #above-the-fold {
+        display: block;
+    }
+}
+
+/*small mobile*/
+@media screen and (min-width: 245px) and (max-width: 320px) {
     #above-the-fold #img2 {
         display: none;
     }
@@ -40,15 +51,6 @@
     }
 }
 
-
-@media screen and (max-width: 245px) {
-    #above-the-fold img {
-        display: none;
-    }
-    #above-the-fold {
-        display: block;
-    }
-}
 
 /*mobile: landscape*/
 @media screen and (min-width: 480px) {

@@ -8,12 +8,12 @@
     <title>World on wheels</title>
 </head>
 <body>
-<div id="navBtn"><span id="openNav" onclick="openNav()">&#9776;</span></div>
-<nav id="mySidenav">
-    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+<div id="nav-btn"><span id="open-nav" onclick="openNav()">&#9776;</span></div>
+<nav id="sidenav">
+    <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
     <a class="active" href="index.html">Home</a>
-    <a href="rideSafe.html">Ride safe</a>
-    <a href="">All routes</a>
+    <a href="all-routes.html">All routes</a>
+    <a href="ride-safe.html">Ride safe</a>
     <a href="">Contacts</a>
 </nav>
 <main>
@@ -22,7 +22,7 @@
         <img  id="img1-top" alt="image of bike" src="img/img1-top.jpg">
         <span>There is no better way to explore world than on a bicycle.
             Find picturesque landscapes, historical monuments and cool places travelling
-            on wheels.
+            on wheels.<br>
         </span>
         <img id="img3-top" alt="image of bike" src="img/img3-top.jpg">
         <img id="img4-top" alt="image of bike" src="img/img4-top.jpg">
@@ -30,9 +30,10 @@
         <img id="img2" alt="image of bike" src="img/img2.jpg">
         <img id="img3-bottom" alt="image of bike" src="img/img3-bottom.jpg">
         <img id="img4-bottom" alt="image of bike" src="img/img4-bottom.jpg">
-
     </section>
+    <div style="text-align: center"><button id="all-routes-btn" onclick="navigateToPage('all-routes.html')">All routes</button></div>
 </main>
 <script src="js/sidenav.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
