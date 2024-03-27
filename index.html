@@ -13,7 +13,6 @@
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
     <a class="active" href="index.html">Home</a>
     <a href="all-routes.html">All routes</a>
-    <a href="ride-safe.html">Ride safe</a>
     <a href="">Contacts</a>
 </nav>
 <main>
@@ -32,7 +31,97 @@
         <img id="img4-bottom" alt="image of bike" src="img/img4-bottom.jpg">
     </section>
     <div style="text-align: center"><button id="all-routes-btn" onclick="navigateToPage('all-routes.html')">All routes</button></div>
+    <h2>Bicycle routes for everyone</h2>
+    <section id="second-box">
+        <p>
+            For many, traveling by bike is the antithesis to the modern trend of fast, fly-in-fly-out travel.
+
+            In fact, it’s hard to envisage a better way to explore a country than on two wheels, slowly meandering along
+            as the landscape unfurls before you. Cycling gives you time to admire your surroundings, draws you away from the
+            tourist crowds and, perhaps best of all, it’s sustainable – causing no harm to the environment you’ve traveled to see.
+        </p>
+        <img id="img-5" alt="image of bike" src="img/img-5.jpg">
+    </section>
 </main>
+
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="footer-logo-column">
+                <a href="/" aria-label="Go to Supabase homepage" title="Go to Supabase Homepage">
+                </a>
+            </div>
+            <div class="link-columns">
+                <section>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="About">
+                                About Bike the world
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Write For Us">
+                                Write For Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Terms and Conditions">
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Privacy Policy">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Top destinations</h3>
+                    <ul>
+                        <li>
+                            <a href="more-info.html?name=namibia" title="Namibia">Namibia</a>
+                        </li>
+                        <li>
+                            <a href="more-info.html?name=cuba" title="Cuba">Cuba</a>
+                        </li>
+                        <li>
+                            <a href="more-info.html?name=bolivia" title="Bolivia">Bolivia</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Socials</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="Facebook">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Instagram">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Twitter">X / Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Threads">Threads</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- bottom part section -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+            © <span id="year"></span> Anastasiia Hopchuk
+        </div>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 <script src="js/sidenav.js"></script>
 <script src="js/script.js"></script>
 </body>

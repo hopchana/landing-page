@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/above-the-fold.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/shramov/leaflet-plugins@master/layer/vector/GPX.js'></script>
 
     <title>World on wheels</title>
+    <style>
+        body {
+            max-width: 992px;
+        }
+    </style>
 </head>
 <body>
 <div id="nav-btn"><span id="open-nav" onclick="openNav()">&#9776;</span></div>
 <nav id="sidenav">
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
-    <a class="active" href="all-routes.html">All routes</a>
+    <a href="all-routes.html">All routes</a>
     <a href="">Contacts</a>
 </nav>
 <main>
-    <section id="all-routes">
+    <section id="more-info" class="more-info">
 
     </section>
+    <div id="map" style="height: 30rem"></div>
+    <script src="js/more-info.js"></script>
 </main>
 
 <footer>
@@ -102,8 +112,5 @@
 </script>
 
 <script src="js/sidenav.js"></script>
-<script src="js/script.js"></script>
-<script src="js/route-card.js"></script>
-
 </body>
 </html>

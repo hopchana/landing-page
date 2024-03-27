@@ -1,0 +1,4 @@
+L.marker([-22.56522,17.08422]).addTo(map); // start
+L.marker([-28.68586,17.55753]).addTo(map); // end
+L.marker([-24.254868,15.582143]).addTo(map); // sossusvlei
+L.marker([-27.829,17.571]).addTo(map); // Fish River Canyon

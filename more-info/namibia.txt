@@ -1,0 +1,26 @@
+<h1 class="more-info">Southern Namibia</h1>
+<img src="img/namibia-1.jpg" alt="Desert">
+<h3>Start: Windhoek</h3>
+<h3>End: Felix Unite</h3>
+<h3>Distance: 621 miles (1000km)</h3>
+
+Namibia has the second-lowest population density in the world. Most of its people are in the north, so the south is empty indeed. Not surprisingly, it’s dry and unforgiving land. Towns and amenities are few and far between. Roads are mostly loose gravel. But it’s also unutterably gorgeous.
+<br>
+<br>
+A seven-day, 621-mile (1000km) unsupported pedal through this astonishing landscape, from Namibia’s capital of Windhoek to the South African border, requires planning, packing, perseverance and profound self-reliance. Factoring in the vast distances between towns, roadhouses, campgrounds and great attractions, an ideal itinerary is to head south-west to Sesriem for a visit to Sossusvlei’s red dunes and salt pans, then turn south via Helmeringhausen and Seeheim to pause in Hobas and view Fish River Canyon (rivalling the Grand Canyon), and then point south again to Felix Unite, near the Noordoewer international crossing to South Africa.
+<br>
+<br>
+<br>
+
+<article class="more-info-img">
+<img src="img/namibia.jpg" alt="Desert">
+<img src="img/namibia-2.jpg" alt="Desert">
+<img src="img/namibia-3.jpg" alt="Desert">
+<img src="img/namibia-5.jpg" alt="Desert">
+<img src="img/namibia-6.jpg" alt="Desert">
+<img src="img/namibia-7.jpg" alt="Desert">
+</article>
+
+<br>
+<h2>Route on map</h2>
+<br>

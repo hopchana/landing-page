@@ -10,3 +10,7 @@ function scrollToSection(sectionId) {
 function navigateToPage(pageUrl) {
     window.location.href = pageUrl;
 }
+
+function generateMoreInfo(name) {
+    window.location.href = `more-info.html?name=${name}`;
+}
