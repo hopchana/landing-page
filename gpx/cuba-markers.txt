@@ -1,0 +1,3 @@
+L.marker([20.07001,-74.48926]).addTo(map); // start
+L.marker([20.34401,-74.49349]).addTo(map); // end
+L.marker([20.16486,-74.60929]).addTo(map); // Sierra del Purial

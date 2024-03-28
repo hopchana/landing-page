@@ -1,5 +1,5 @@
 <h1 class="more-info">Southern Namibia</h1>
-<img src="img/namibia-1.jpg" alt="Desert">
+<img src="img/namibia.jpg" alt="Desert">
 <h3>Start: Windhoek</h3>
 <h3>End: Felix Unite</h3>
 <h3>Distance: 621 miles (1000km)</h3>
@@ -13,12 +13,12 @@ A seven-day, 621-mile (1000km) unsupported pedal through this astonishing landsc
 <br>
 
 <article class="more-info-img">
-<img src="img/namibia.jpg" alt="Desert">
+<img src="img/namibia-1.jpg" alt="Desert">
 <img src="img/namibia-2.jpg" alt="Desert">
 <img src="img/namibia-3.jpg" alt="Desert">
+<img src="img/namibia-4.jpg" alt="Desert">
 <img src="img/namibia-5.jpg" alt="Desert">
 <img src="img/namibia-6.jpg" alt="Desert">
-<img src="img/namibia-7.jpg" alt="Desert">
 </article>
 
 <br>

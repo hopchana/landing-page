@@ -17,8 +17,14 @@ tag 10px
 
 */
 
+#nothing-is-here {
+    text-align: center;
+    margin: 2%;
+}
+
 img {
     width: 100%;
+    /*border-radius: 22px;*/
 }
 
 :root {
@@ -27,25 +33,6 @@ img {
     --dark: #999990;
     --darker: #56514B;
     --like: #FF3040;
-
-
-
-        --primary: #3ECF8E;
-        --primary-dark: #37996B;
-        --primary-darker: #317F5A;
-        --headline-color: #F9F9F9;
-        --text-color: #7E7E7E;
-        --bg: #1C1C1C;
-        --footer-bg: #161616;
-        --secondary: #2E2E2E;
-        --footer-border: #3E3E3E;
-        --gray-border-hover: #505050;
-        --gray-menu-button: #7E7E7E;
-        --gray-menu-button-hover: #232323;
-        --navbar-height: 64px;
-        --gray-text-hover: #8F8F8F;
-        --gray-icon: #A0A0A0;
-        --footer-width: 64rem;
 }
 
 #second-box {
@@ -87,38 +74,24 @@ img {
     img {
         width: 100%;
         height: 100%;
-        border-right: #56514B solid 2px;
-        padding-right: 20px;
         grid-row: 1/3;
     }
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
     margin: auto auto 20px;
     border: #56514B solid 2px;
     padding: 20px;
-    transition: all 0.2s ease-in-out;
-    max-width: 992px;
+    overflow: auto;
 }
 
 .article-section:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0 6px 16px;
 }
 
-
-.link-columns {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1em;
-}
-
 .section-heading h2 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
     letter-spacing: 0.05em;
 }
 
@@ -131,29 +104,26 @@ img {
     margin-top: auto;
 }
 .section-content {
-    /*font-size: 16px;*/
-    padding-left: 40px;
+    margin-top: 0.4rem;
     display: block;
 }
 
 .more-info-btn {
     margin-left: auto;
-    margin-top: auto;
+    /*margin-top: auto;*/
     margin-bottom: 0;
     display: block;
     bottom: 0;
     right: 0;
     background-color: #e7e5dd;
     border: 1px solid #56514b;
-    border-radius: 22px;
     color: #56514b;
     cursor: pointer;
     font-size: 16px;
     letter-spacing: 3px;
-    /*height: 40px;*/
-    /*outline: 0;*/
+    height: 30px;
     text-align: center;
-    /*width: 15%;*/
+    margin-top: 0.7em;
 }
 
 .more-info-btn:hover {
@@ -173,6 +143,16 @@ main {
 
 html {
     scroll-behavior: smooth;
+}
+
+.link-columns {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
 }
 
 /*mobile portrait*/
@@ -200,7 +180,7 @@ section {
 #all-routes-btn {
     background-color: #e7e5dd;
     border: 1px solid #56514b;
-    border-radius: 22px;
+    /*border-radius: 22px;*/
     color: #56514b;
     cursor: pointer;
     font-size: 16px;
@@ -311,7 +291,6 @@ section {
     h1 {
         font-size: 60px;
         letter-spacing: 1rem;
-        padding-top: 1rem;
     }
     section {
         font-size: 18px;
@@ -325,6 +304,26 @@ section {
         font-size: 40px;
         margin-bottom: 0.4em;
         letter-spacing: 0.4rem;
+    }
+    .article-section {
+        img {
+            width: 100%;
+            height: 100%;
+            border-right: #56514B solid 2px;
+            padding-right: 20px;
+            grid-row: 1/3;
+        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        margin: auto auto 20px;
+        border: #56514B solid 2px;
+        padding: 20px;
+        max-width: 992px;
+    }
+    .section-content {
+        margin-top: 0;
+        padding-left: 40px;
     }
 }
 
@@ -340,13 +339,6 @@ section {
     section {
         font-size: 20px;
     }
-    .more-info-img img:hover {
-        transform: scale(1.2);
-    }
-
-    .more-info-img img {
-        transition: all 0.4s ease-out;
-    }
 }
 
 /*large desktop, tv, etc*/
@@ -361,23 +353,7 @@ section {
     h1 {
         letter-spacing: 1.7rem;
     }
-
-    .more-info-img img:hover {
-        transform: scale(1.8);
-    }
-
-    .more-info-img img {
-        transition: all 0.5s;
-    }
-
 }
-
-
-
-
-
-
-
 
 
 
@@ -394,11 +370,7 @@ footer {
 
 }
 
-
 /* columns with links */
-
-
-
 .link-columns>div {
     flex-grow: 1;
     display: flex;

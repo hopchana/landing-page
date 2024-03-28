@@ -9,6 +9,7 @@ nav {
     transition: 0.5s;
     padding-top: 60px;
     right: 0;
+    margin-bottom: 1rem;
 }
 
 nav a {
@@ -66,7 +67,9 @@ nav .close-nav-btn:hover {
     }
 
     nav a {
-        padding: 0.5em 2.5% 0.1em;
+        padding: 0.5em 2% 0.1em;
+        font-size: 18px;
+        letter-spacing: 2px;
     }
 
     .active {
@@ -80,7 +83,15 @@ nav .close-nav-btn:hover {
 /*tablet: portrait*/
 @media screen and (min-width: 768px) {
     nav a {
-        padding: 0.5em 5% 0.5em;
+        letter-spacing: 3px;
+        padding: 0.5em 3% 0.5em;
         font-size: 22px;
+    }
+
+}
+/*tablet: landscape, laptop, desktop*/
+@media screen and (min-width: 992px) {
+    nav a {
+        padding: 0.5em 5% 0.5em;
     }
 }

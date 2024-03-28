@@ -1,0 +1,29 @@
+<h1 class="more-info">La Farola, Cuba</h1>
+<img src="img/cuba.jpg" alt="Desert">
+<h3>Start: Cajobabo</h3>
+<h3>End: Baracoa</h3>
+<h3>Distance: 34 miles (55km)</h3>
+
+<p>
+Hailed as one of the seven modern engineering marvels of Cuba, La Farola (the lighthouse road) links the beach hamlet of Cajobabo on the arid Caribbean coast with the nation’s beguiling oldest city, Baracoa.
+</p>
+<p>
+Measuring 34 miles (55km) in length, the road traverses the steep-sided Sierra del Puril, snaking its way precipitously through a landscape of granite cliffs and pine-scented cloud forest before falling, with eerie suddenness, upon the lush tropical paradise of the Atlantic coastline.
+</p>
+<p>
+For cyclists, it offers a classic Tour de France-style challenge with tough climbs, invigorating descents and relatively smooth roads. La Farola starts 124 miles (200km) east of Santiago de Cuba and is thus best incorporated into a wider Cuban cycling excursion. You could also charter a taxi to drop you off at the start point.
+</p>
+<br>
+
+<article class="more-info-img">
+<img src="img/cuba-1.jpg" alt="Desert">
+<img src="img/cuba-2.jpg" alt="Desert">
+<img src="img/cuba-3.jpg" alt="Desert">
+<img src="img/cuba-4.jpg" alt="Desert">
+<img src="img/cuba-5.jpg" alt="Desert">
+<img src="img/cuba-6.jpg" alt="Desert">
+</article>
+
+<br>
+<h2>Route on map</h2>
+<br>
