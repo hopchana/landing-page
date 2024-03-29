@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/above-the-fold.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/shramov/leaflet-plugins@master/layer/vector/GPX.js'></script>
 
     <title>World on wheels</title>
+    <style>
+        body {
+            max-width: 992px;
+        }
+    </style>
 </head>
 <body>
 <div id="nav-btn"><span id="open-nav" onclick="openNav()">&#9776;</span></div>
 <nav id="sidenav">
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
-    <a class="active" href="#">All routes</a>
+    <a href="all-routes.html">All routes</a>
     <a href="">Contacts</a>
     <a href="favourite-routes.html">Favourite routes</a>
 </nav>
 <main>
-    <section id="all-routes">
-
+    <h2>Sources</h2>
+    <section id="sources">
+        <p><a href="https://unsplash.com/">Unsplash.com</a></p>
+        <p><a href="https://www.pexels.com/">Pexels.com</a></p>
+        <p><a href="https://www.lonelyplanet.com/articles/best-cycle-routes-around-the-world">lonelyplanet.com</a></p>
     </section>
 </main>
 
@@ -35,8 +46,8 @@
                     <h3>Company</h3>
                     <ul>
                         <li>
-                            <a href="sources.html" title="Sources">
-                                Sources
+                            <a href="#" title="About">
+                                About Bike the world
                             </a>
                         </li>
                         <li>
@@ -98,15 +109,6 @@
         </div>
     </div>
 </footer>
-<script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
-
 <script src="js/sidenav.js"></script>
-<script src="js/script.js"></script>
-<script src="js/tabRec.js"></script>
-<script src="js/route-card.js"></script>
-
-
 </body>
 </html>

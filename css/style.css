@@ -41,6 +41,10 @@ img {
     gap: 3%;
 }
 
+#sources a{
+    color:#56514B;
+}
+
 .more-info-img {
     img {
         height: 100%;
