@@ -24,15 +24,21 @@ tag 10px
 
 img {
     width: 100%;
-    /*border-radius: 22px;*/
 }
 
 :root {
-    --lighter: #e7e5dd;
-    --light: #bdbbad;
-    --dark: #999990;
-    --darker: #56514B;
-    --like: #FF3040;
+    --body-color: #e7e5dd;
+    --light: #999990;
+    --dark: #7c7c75;
+    --text-color: #56514B;
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+    --body-color: #302e28;
+    --light: #999990;
+    --dark: #bdbbad;
+    --text-color: #beb8b1;
 }
 
 #second-box {
@@ -42,7 +48,7 @@ img {
 }
 
 #sources a{
-    color:#56514B;
+    color:var(--text-color);
 }
 
 .more-info-img {
@@ -65,13 +71,20 @@ img {
 .like-btn svg {
     height: 2rem;
     width: 2rem;
-    stroke: #999990;
+    stroke: var(--light);
     stroke-width: 2px;
+}
+.like-btn svg:hover {
+    stroke: var(--dark);
+}
+
+.liked svg:hover {
+    stroke: var(--text-color);
 }
 
 .liked svg {
-    stroke: #56514B;
-    fill: #56514B;
+    stroke: var(--text-color);
+    fill: var(--text-color);
 }
 
 .article-section {
@@ -84,7 +97,7 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr auto;
     margin: auto auto 20px;
-    border: #56514B solid 2px;
+    border: var(--text-color) solid 2px;
     padding: 20px;
     overflow: auto;
 }
@@ -119,9 +132,9 @@ img {
     display: block;
     bottom: 0;
     right: 0;
-    background-color: #e7e5dd;
-    border: 1px solid #56514b;
-    color: #56514b;
+    background-color: var(--body-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
     cursor: pointer;
     font-size: 16px;
     letter-spacing: 3px;
@@ -131,14 +144,37 @@ img {
 }
 
 .more-info-btn:hover {
-    background: #bdbbad;
+    background: var(--light);
     transition: 0.3s;
 }
 
+#all-routes-btn {
+    background-color: var(--body-color);
+    border: 1px solid var(--light);
+    /*border-radius: 22px;*/
+    color: var(--dark);
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 3px;
+    height: 40px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 60%;
+}
+
+#all-routes-btn:hover {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    transition: 0.3s;
+}
+
+
 body {
-    background: #e7e5dd;
+    background: var(--body-color);
     margin: 0 auto;
     max-width: 98%;
+    color: var(--text-color);
 }
 
 main {
@@ -162,7 +198,6 @@ html {
 /*mobile portrait*/
 h1 {
     font-size: 40px;
-    color: #56514b;
     margin-top: 0;
     margin-bottom: 0.2em;
     letter-spacing: 0.04rem;
@@ -171,34 +206,12 @@ h1 {
 h2 {
     font-size: 26px;
     letter-spacing: 0;
-    color: #56514b;
     margin-top: 0;
     margin-bottom: 0.2em;
 }
 
 section {
     font-size: 16px;
-    color: #838367;
-}
-
-#all-routes-btn {
-    background-color: #e7e5dd;
-    border: 1px solid #56514b;
-    /*border-radius: 22px;*/
-    color: #56514b;
-    cursor: pointer;
-    font-size: 16px;
-    letter-spacing: 3px;
-    height: 40px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    width: 60%;
-}
-
-#all-routes-btn:hover {
-    background: #bdbbad;
-    transition: 0.3s;
 }
 
 /*tiny mobile*/
@@ -313,7 +326,7 @@ section {
         img {
             width: 100%;
             height: 100%;
-            border-right: #56514B solid 2px;
+            border-right: var(--text-color) solid 2px;
             padding-right: 20px;
             grid-row: 1/3;
         }
@@ -321,7 +334,6 @@ section {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr auto;
         margin: auto auto 20px;
-        border: #56514B solid 2px;
         padding: 20px;
         max-width: 992px;
     }
@@ -366,7 +378,7 @@ section {
 footer {
     margin-top: 4em;
     padding-top: 1rem;
-    border-top: #999990 1px solid;
+    border-top: var(--light) 1px solid;
 }
 
 .footer-wrapper {
@@ -411,11 +423,13 @@ footer {
 /*? Footer bottom */
 .footer-bottom {
     margin-top: 4rem;
-    width: 100%;
+    /*width: 100%;*/
     color: var(--dark);
+    text-align: center;
 }
 
 .footer-bottom-wrapper {
     width: 100%;
     padding: 0 1rem 2.5rem;
 }
+
