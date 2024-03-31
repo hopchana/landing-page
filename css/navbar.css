@@ -9,6 +9,7 @@ nav {
     padding-top: 60px;
     right: 0;
     margin-bottom: 1rem;
+    background: var(--body-color);
 }
 
 nav a {
@@ -18,7 +19,7 @@ nav a {
     padding: 0.4em 0.4em 0.4em 12%;
     text-decoration: none;
     display: block;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 i {
@@ -27,6 +28,7 @@ i {
     color: var(--light);
     font-size: 40px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 nav a:hover {
@@ -60,7 +62,6 @@ nav .close-nav-btn:hover {
 }
 
 i:hover {
-    transition: 0.3s;
     color: var(--text-color);
 }
 
@@ -75,6 +76,7 @@ i:hover {
         position: relative;
         padding: 0;
         justify-content: right;
+        background: none;
     }
 
     nav a {

@@ -80,12 +80,12 @@
         gap: 0.7em;
     }
 
-    #above-the-fold img:hover, #img-5:hover {
-        transform: scale(1.1);
+    #above-the-fold img, #img-5 {
+        transition: 0.4s;
     }
 
-    #above-the-fold img, #img-5 {
-        transition: all 0.4s ease-out;
+    #above-the-fold img:hover, #img-5:hover {
+        transform: scale(1.1);
     }
 }
 
