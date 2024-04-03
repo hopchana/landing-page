@@ -1,36 +1,3 @@
-function scrollToSection(sectionId) {
-    let section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-}
-
-function navigateToPage(pageUrl) {
-    window.location.href = pageUrl;
-}
-
-function generateMoreInfo(name) {
-    window.location.href = `more-info.html?name=${name}`;
-}
-
-
-window.onload = function() {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', window.location.href, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 404) {
-            window.location.href = '404.html'; // Redirect to the custom 404 page
-        }
-        }
-    };
-    xhr.send();
-};
-
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
 /*==================== Black theme ====================*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
@@ -68,3 +35,91 @@ themeButton.addEventListener("click", () => {
     localStorage.setItem("selected-theme", getCurrentTheme());
     localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+
+/*==================== Footer ====================*/
+let footer = document.getElementById("footer");
+footer.innerHTML = `<div class="footer-wrapper">
+            <div class="footer-columns">
+                <div class="link-columns">
+                    <section>
+                        <h3>Company</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="About">About Bike the world</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Write For Us">
+                                    Write For Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Terms and Conditions">
+                                    Terms and Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Privacy Policy">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Top destinations</h3>
+                        <ul>
+                            <li>
+                                <a href="more-info.html?name=namibia" title="Namibia">Namibia</a>
+                            </li>
+                            <li>
+                                <a href="more-info.html?name=cuba" title="Cuba">Cuba</a>
+                            </li>
+                            <li>
+                                <a href="more-info.html?name=bolivia" title="Bolivia">Bolivia</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Socials</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Facebook">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Instagram">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Twitter">X / Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Threads">Threads</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- bottom part section -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-wrapper">
+                © <span id="year"></span> Anastasiia Hopchuk
+            </div>
+        </div>`;
+document.getElementById("year").innerHTML = new Date().getFullYear().toString();
+
+function scrollToSection(sectionId) {
+    let section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+
+function navigateToPage(pageUrl) {
+    window.location.href = pageUrl;
+}
+
+function generateMoreInfo(name) {
+    window.location.href = `more-info.html?name=${name}`;
+}
