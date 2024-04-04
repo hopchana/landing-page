@@ -26,6 +26,28 @@ img {
     width: 100%;
 }
 
+#write-for-us {
+    display: block;
+}
+
+#write-for-us form{
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap:2%;
+}
+#write-for-us input {
+    max-width: 270px;
+    height: 15px;
+}
+
+#write-for-us input[type=text] {
+    min-width: 90px;
+}
+
+input#distance {
+    max-width: 90px;
+}
+
 :root {
     --body-color: #e7e5dd;
     --light: #999990;
@@ -364,6 +386,10 @@ footer {
     section {
         font-size: 18px;
     }
+    #write-for-us input {
+        font-size: 14px;
+        height: 16px;
+    }
     #second-box {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -407,6 +433,10 @@ footer {
     section {
         font-size: 20px;
     }
+    #write-for-us input {
+        font-size: 16px;
+        height: 18px;
+    }
 }
 
 /*large desktop, tv, etc*/
@@ -420,5 +450,9 @@ footer {
     }
     h1 {
         letter-spacing: 1.7rem;
+    }
+    #write-for-us input {
+        font-size: 18px;
+        height: 20px;
     }
 }

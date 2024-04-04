@@ -49,7 +49,7 @@ footer.innerHTML = `<div class="footer-wrapper">
                                 <a href="#" title="About">About Bike the world</a>
                             </li>
                             <li>
-                                <a href="#" title="Write For Us">
+                                <a href="write-for-us.html" title="Write For Us">
                                     Write For Us
                                 </a>
                             </li>
@@ -122,4 +122,9 @@ function navigateToPage(pageUrl) {
 
 function generateMoreInfo(name) {
     window.location.href = `more-info.html?name=${name}`;
+}
+
+function inputDisabled(id) {
+    document.getElementById("name-input").disabled = id;
+    document.getElementById("name-input").value="";
 }
