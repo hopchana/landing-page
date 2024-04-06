@@ -14,14 +14,43 @@ Measuring 34 miles (55km) in length, the road traverses the steep-sided Sierra d
 For cyclists, it offers a classic Tour de France-style challenge with tough climbs, invigorating descents and relatively smooth roads. La Farola starts 124 miles (200km) east of Santiago de Cuba and is thus best incorporated into a wider Cuban cycling excursion. You could also charter a taxi to drop you off at the start point.
 </p>
 <br>
-
 <article class="more-info-img">
-<img src="img/cuba-1.jpg" alt="Desert">
-<img src="img/cuba-2.jpg" alt="Desert">
-<img src="img/cuba-3.jpg" alt="Desert">
-<img src="img/cuba-4.jpg" alt="Desert">
-<img src="img/cuba-5.jpg" alt="Desert">
-<img src="img/cuba-6.jpg" alt="Desert">
+        <div class="card">
+                <img
+                    src="img/cuba-1.jpg"
+                    alt="City"
+                >
+        </div>
+        <div class="card">
+                <img
+                    src="img/cuba-2.jpg"
+                    alt="City"
+                >
+        </div>
+        <div class="card">
+                <img
+                    src="img/cuba-3.jpg"
+                    alt="City"
+                >
+        </div>
+        <div class="card">
+                <img
+                    src="img/cuba-4.jpg"
+                    alt="Building"
+                >
+        </div>
+        <div class="card">
+                <img
+                    src="img/cuba-5.jpg"
+                    alt="City"
+                >
+        </div>
+        <div class="card">
+                  <img
+                      src="img/cuba-6.jpg"
+                      alt="Ship"
+                  >
+          </div>
 </article>
 
 <br>
