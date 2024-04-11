@@ -21,11 +21,23 @@ img {
     box-sizing: unset;
     display: grid;
     grid-template-columns: min-content auto;
-    /*gap:3px;*/
+    row-gap:3px;
+    column-gap:8px;
 }
+
 #write-for-us input {
     max-width: 270px;
-    height: 19px;
+}
+
+#long-desc, #short-desc {
+    width: 100%;
+}
+
+#long-desc {
+    max-width: 750px;
+}
+#short-desc {
+    max-width: 380px;
 }
 
 #write-for-us input[type=text] {
@@ -389,9 +401,6 @@ footer {
     section {
         font-size: 18px;
     }
-    #write-for-us input {
-        font-size: 14px;
-    }
     #second-box {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -487,6 +496,5 @@ footer {
     }
     #write-for-us input {
         font-size: 18px;
-        height: 20px;
     }
 }

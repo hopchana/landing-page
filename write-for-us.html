@@ -38,8 +38,11 @@
             <label for="anonymous" style="grid-column:1/3"><input type="radio" name="name" id="anonymous" onclick="inputDisabled(true)">Remain Anonymous</label>
 
             </div>
-            <label for="text">Write a description here:</label><br>
-            <textarea id="text" rows="10" cols="50"></textarea>
+            <label for="short-desc">Write short description here:</label><br>
+            <textarea id="short-desc" rows="10" maxlength="500"></textarea>
+            <br>
+            <label for="long-desc">Write long description here:</label><br>
+            <textarea id="long-desc" rows="20" maxlength="2500"></textarea>
             <br>
             <label for="accept"><input type="checkbox" id="accept">I accept the Terms of Use & Privacy Policy</label>
         </form>
