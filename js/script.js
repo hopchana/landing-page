@@ -54,8 +54,8 @@ footer.innerHTML = `<div class="footer-wrapper">
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Terms and Conditions">
-                                    Terms and Conditions
+                                <a href="sources.html" title="Sources">
+                                    Sources
                                 </a>
                             </li>
                             <li>
@@ -69,13 +69,13 @@ footer.innerHTML = `<div class="footer-wrapper">
                         <h3>Top destinations</h3>
                         <ul>
                             <li>
-                                <a href="more-info.html?name=namibia" title="Namibia">Namibia</a>
+                                <a href="more-info.html?name=namibia">Southern Namibia</a>
                             </li>
                             <li>
-                                <a href="more-info.html?name=la-farola" title="Cuba">Cuba</a>
+                                <a href="more-info.html?name=la-farola">La Farola, Cuba</a>
                             </li>
                             <li>
-                                <a href="more-info.html?name=bolivia" title="Bolivia">Bolivia</a>
+                                <a href="more-info.html?name=salar-de-uyuni">Salar De Uyuni, Bolivia</a>
                             </li>
                         </ul>
                     </section>

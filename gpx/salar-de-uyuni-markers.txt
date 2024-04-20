@@ -1,0 +1,5 @@
+L.marker([-20.467023, -66.824288]).addTo(map); // start
+L.marker([-19.015022, -68.370681]).addTo(map); // end
+L.marker([-19.3697374,-68.1715952]).addTo(map); // Salar de Coipasa, Provincia Sabaya, Bolivia
+L.marker([-19.8505095,-68.24981222]).addTo(map); // Municipio Llica, Daniel Campos, Bolivia
+L.marker([-20.2042644,-67.5149954]).addTo(map); // Salar de Uyuni, Municipio Colcha K, Provincia Nor Lípez, Bolivia

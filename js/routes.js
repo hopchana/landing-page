@@ -25,8 +25,8 @@ const routes = [
             'with the nation’s beguiling oldest city, Baracoa.'
     },
     {
-        id: 'bolivia',
-        img: 'img/bolivia/bolivia.jpg',
+        id: 'salar-de-uyuni',
+        img: 'img/salar-de-uyuni/salar-de-uyuni.jpg',
         alt: 'Cycling on the salt flats of Bolivia makes for an unforgettable experience',
         name: 'Salar De Uyuni, Bolivia',
         start: 'Uyuni',
