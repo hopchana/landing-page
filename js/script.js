@@ -80,19 +80,19 @@ footer.innerHTML = `<div class="footer-wrapper">
                         </ul>
                     </section>
                     <section>
-                        <h3>Socials</h3>
+                        <h3>Games</h3>
                         <ul>
                             <li>
-                                <a href="#" title="Facebook">Facebook</a>
+                                <a href="memory-card-game.html" title="Memory Card Game">Memory Card Game</a>
                             </li>
                             <li>
-                                <a href="#" title="Instagram">Instagram</a>
+                                <a href="#" title="---">---</a>
                             </li>
                             <li>
-                                <a href="#" title="Twitter">X / Twitter</a>
+                                <a href="#" title="---">---</a>
                             </li>
                             <li>
-                                <a href="#" title="Threads">Threads</a>
+                                <a href="#" title="---">--</a>
                             </li>
                         </ul>
                     </section>

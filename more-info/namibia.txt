@@ -12,38 +12,38 @@ A seven-day, 621-mile (1000km) unsupported pedal through this astonishing landsc
 <br>
 <br>
 
-<article class="more-info-img">
-        <div class="card">
+<article class="more-info-images">
+        <div class="more-info-img">
                 <img
                     src="img/namibia/namibia-1.jpg"
                     alt="Desert"
                 >
         </div>
-        <div class="card">
+        <div class="more-info-img">
                 <img
                     src="img/namibia/namibia-2.jpg"
                     alt="Desert"
                 >
         </div>
-        <div class="card">
+        <div class="more-info-img">
                 <img
                     src="img/namibia/namibia-3.jpg"
                     alt="Desert"
                 >
         </div>
-        <div class="card">
+        <div class="more-info-img">
                 <img
                     src="img/namibia/namibia-4.jpg"
                     alt="Desert"
                 >
         </div>
-        <div class="card">
+        <div class="more-info-img">
                 <img
                     src="img/namibia/namibia-5.jpg"
                     alt="Desert"
                 >
         </div>
-        <div class="card">
+        <div class="more-info-img">
                   <img
                       src="img/namibia/namibia-6.jpg"
                       alt="Desert"

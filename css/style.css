@@ -116,7 +116,7 @@ body.dark-theme {
     color:var(--text-color);
 }
 
-.more-info-img {
+.more-info-images {
     img {
         height: 100%;
     }
@@ -344,7 +344,7 @@ footer {
         font-size: 22px;
         letter-spacing: 0;
     }
-    .more-info-img {
+    .more-info-images {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
@@ -372,7 +372,7 @@ footer {
         font-size: 30px;
         letter-spacing: 0;
     }
-    .more-info-img {
+    .more-info-images {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
@@ -404,7 +404,7 @@ footer {
         margin-bottom: 0.4em;
         letter-spacing: 0.5rem;
     }
-    .more-info-img {
+    .more-info-images {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
@@ -477,13 +477,13 @@ footer {
 
 /*tablet: landscape, laptop, desktop*/
 @media screen and (min-width: 992px) {
-    .more-info-img {
+    .more-info-images {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
     }
 
-    .card {
+    .more-info-img {
         position: relative;
         left: 0;
         width: 5rem;
@@ -495,17 +495,17 @@ footer {
         flex: 0.25;
     }
 
-    .card img {
+    .more-info-img img {
         height: 24rem;
         width: auto;
     }
 
-    .card:hover {
+    .more-info-img:hover {
         flex: 2;
         cursor: pointer;
     }
 
-    .card:hover img{
+    .more-info-img:hover img{
         flex: 2;
         width: 100%;
     }
