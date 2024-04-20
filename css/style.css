@@ -4,6 +4,30 @@
     padding: 0;
 }
 
+/* Style your textarea container */
+.textarea-container {
+    position: relative;
+    width: fit-content; /* Adjust width as needed */
+}
+
+/* Style the textarea */
+.textarea {
+    color: var(--text-color);
+    background: var(--body-color);
+    padding: 5px; /* Add padding for aesthetics */
+    min-height: 21px;
+    min-width: 88px;
+}
+
+/* Style the counter */
+.counter {
+    position: absolute;
+    color: gray;
+    padding: 5px;
+    bottom: 5px;
+    right: 10px;
+}
+
 #nothing-is-here {
     text-align: center;
     margin: 2%;
@@ -17,7 +41,7 @@ img {
     display: block;
 }
 
-#write-for-us form div{
+.container{
     box-sizing: unset;
     display: grid;
     grid-template-columns: min-content auto;

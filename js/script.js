@@ -125,6 +125,22 @@ function generateMoreInfo(name) {
 }
 
 function inputDisabled(id) {
-    document.getElementById("name-input").disabled = id;
-    document.getElementById("name-input").value="";
+    document.getElementById("name").disabled = id;
+    document.getElementById("name").value="";
+}
+
+function updateCounter(counterId, textareaId) {
+    // Get references to the textarea and counter elements
+    let counter = document.getElementById(counterId);
+    let textarea = document.getElementById(textareaId);
+    // Get current number of characters entered
+    let currentLength = textarea.value.length;
+    // Get maximum allowed characters
+    let maxLength = parseInt(textarea.getAttribute('maxlength'));
+    // Update counter text
+    counter.textContent = `${currentLength}/${maxLength}`;
+    if (currentLength>=(maxLength/1.25).toFixed(0))
+        counter.style.color='red';
+    else
+        counter.style.color='gray';
 }

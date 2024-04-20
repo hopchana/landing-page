@@ -1,7 +1,7 @@
 const tabRecords = [
     {
         id: 'namibia',
-        img: 'img/namibia.jpg',
+        img: 'img/namibia/namibia.jpg',
         alt: 'Zebras in Namibia',
         name: 'Southern Namibia',
         start: 'Windhoek',
@@ -14,7 +14,7 @@ const tabRecords = [
     },
     {
         id: 'cuba',
-        img: 'img/cuba.jpg',
+        img: 'img/cuba/cuba.jpg',
         alt: 'Breathtaking Panoramic View of La Farola, Cuba',
         name: 'La Farola, Cuba',
         start: 'Cajobabo',
@@ -26,7 +26,7 @@ const tabRecords = [
     },
     {
         id: 'bolivia',
-        img: 'img/bolivia.jpg',
+        img: 'img/bolivia/bolivia.jpg',
         alt: 'Cycling on the salt flats of Bolivia makes for an unforgettable experience',
         name: 'Salar De Uyuni, Bolivia',
         start: 'Uyuni',
