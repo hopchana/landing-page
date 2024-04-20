@@ -1,4 +1,4 @@
-const tabRecords = [
+const routes = [
     {
         id: 'namibia',
         img: 'img/namibia/namibia.jpg',
@@ -13,8 +13,8 @@ const tabRecords = [
             'Roads are mostly loose gravel. But it’s also unutterably gorgeous. '
     },
     {
-        id: 'cuba',
-        img: 'img/cuba/cuba.jpg',
+        id: 'la-farola',
+        img: 'img/la-farola/la-farola.jpg',
         alt: 'Breathtaking Panoramic View of La Farola, Cuba',
         name: 'La Farola, Cuba',
         start: 'Cajobabo',

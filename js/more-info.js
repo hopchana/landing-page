@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.error('Error fetching marker code:', error);
         });
+    const location =  new URLSearchParams(window.location.search).get('name');
+    if (location) {
+        fetchWeather(location);
+    }
 });
 
 function generateContent(name) {
@@ -29,4 +33,28 @@ function generateContent(name) {
         .then( dane => {
             document.getElementById("more-info").innerHTML = dane;
         })
+}
+
+const apiKey = '1a39c7f482744820bfd114740241004';
+const apiUrl = 'https://api.weatherapi.com/v1/';
+
+const locationElement = document.getElementById('location');
+const icon = document.getElementById('icon');
+const temperatureElement = document.getElementById('temperature');
+
+function fetchWeather(location) {
+    const url = `${apiUrl}current.json?key=${apiKey}&q=${location}&aqi=no`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            locationElement.innerHTML = "Current weather in " + data.location.name;
+            temperatureElement.textContent = `${Math.round(data.current.temp_c)}°C`;
+            icon.src=data.current.condition.icon;
+        })
+        .catch(() => {
+            locationElement.textContent = "Something went wrong. Try again";
+            icon.src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png";
+            temperatureElement.textContent = "";
+        });
 }

@@ -72,7 +72,7 @@ footer.innerHTML = `<div class="footer-wrapper">
                                 <a href="more-info.html?name=namibia" title="Namibia">Namibia</a>
                             </li>
                             <li>
-                                <a href="more-info.html?name=cuba" title="Cuba">Cuba</a>
+                                <a href="more-info.html?name=la-farola" title="Cuba">Cuba</a>
                             </li>
                             <li>
                                 <a href="more-info.html?name=bolivia" title="Bolivia">Bolivia</a>

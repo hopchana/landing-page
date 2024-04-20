@@ -30,17 +30,30 @@
     <i title="Change theme" class="bx bx-toggle-left change-theme" id="theme-button"></i>
 </nav>
 <main>
-    <section id="more-info" class="more-info">
+    <section id="more-info" class="more-info"></section>
 
+    <section id="weather">
+            <h2 id="location"></h2>
+            <div id="weather-info">
+                <img id="icon" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="icon">
+                <h2 id="temperature"></h2>
+            </div>
     </section>
-    <div id="map" style="height: 30rem"></div>
-    <script src="js/more-info.js"></script>
+    <section>
+        <br>
+        <h2>Route on map</h2>
+        <br>
+        <div id="map" style="height: 30rem"></div>
+    </section>
+
 </main>
 
 <footer id="footer"></footer>
 
 <script src="js/script.js"></script>
+<script src="js/more-info.js"></script>
 <script src="js/sidenav.js"></script>
+<script src="js/get-weather.js"></script>
 
 </body>
 </html>

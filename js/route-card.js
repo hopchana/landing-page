@@ -1,7 +1,7 @@
 const articleSectionsContainer = document.getElementById('all-routes');
 
 // Loop through tabRecords and generate HTML for each section
-tabRecords.forEach((record, index) => {
+routes.forEach((record, index) => {
     const sectionHTML = `
         <article class="article-section">
             <img src="${record.img}" alt=${record.alt}"">

@@ -3,10 +3,10 @@ const favSectionsContainer = document.getElementById('fav-routes');
 let likes = JSON.parse(sessionStorage.getItem('likes'));
 if (likes !==null && likes.length>0) {
     for (let i = 0; i < likes.length; i++) {
-        for (let j = 0; j < tabRecords.length; j++) {
-            if (likes[i]===tabRecords[j].id)
+        for (let j = 0; j < routes.length; j++) {
+            if (likes[i]===routes[j].id)
             {
-                let record = tabRecords[j];
+                let record = routes[j];
                 let sectionHTML = `
                 <article class="article-section">
                     <img src="${record.img}" alt=${record.alt}"">
@@ -36,16 +36,6 @@ if (likes !==null && likes.length>0) {
 } else {
     favSectionsContainer.innerHTML = `<article id="nothing-is-here"><b>Nothing is here</b><br>Try to like some routes in All routes tab<div><button id="all-routes-btn" onclick="navigateToPage('all-routes.html')">All routes</button></div></article>`
 }
-
-// const likeButtons = document.querySelectorAll(".like-btn");
-
-// likeButtons.forEach((likeButton) => {
-//     likeButton.addEventListener("click", () => {
-//         sessionStorage.removeItem(likeButton.id);
-//
-//
-//     });
-// });
 
 function unlike(recordId){
     let likes = JSON.parse(sessionStorage.getItem('likes'));
