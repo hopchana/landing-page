@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/shramov/leaflet-plugins@master/layer/vector/GPX.js'></script>
@@ -32,7 +31,7 @@
 <main>
     <section id="more-info" class="more-info"></section>
 
-    <section id="weather">
+    <section id="weather"  class="center">
             <h2 id="location"></h2>
             <div id="weather-info">
                 <img id="icon" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="icon">
@@ -41,7 +40,7 @@
     </section>
     <section>
         <br>
-        <h2>Route on map</h2>
+        <h2 class="center">Route on map</h2>
         <br>
         <div id="map" style="height: 30rem"></div>
     </section>

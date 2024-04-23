@@ -46,7 +46,7 @@ footer.innerHTML = `<div class="footer-wrapper">
                         <h3>Company</h3>
                         <ul>
                             <li>
-                                <a href="#" title="About">About Bike the world</a>
+                                <a href="#" title="About">About World on wheels</a>
                             </li>
                             <li>
                                 <a href="write-for-us.html" title="Write For Us">

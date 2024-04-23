@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar.css">
     <title>World on wheels</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
     <h2>Write for us</h2>
     <section id="write-for-us">
         <form>
-            <div class="container">
+            <div id="write-for-us-container">
             <label for="start">Start:</label><input type="text" id="start">
             <label for="end">End:</label><input type="text" id="end">
             <label for="distance">Distance:</label>
@@ -34,6 +34,7 @@
             <input type="text" id="name" value="Napoléon Bonaparte" autocomplete="name" disabled>
             <label for="anonymous" style="grid-column:1/3"><input type="radio" name="name" id="anonymous" onclick="inputDisabled(true)" autocomplete="false">Remain Anonymous</label>
             </div>
+            <br>
             <label for="short-desc">Write short description here:</label><br>
             <div class="textarea-container">
                 <textarea class="textarea" id="short-desc" rows="12" cols="50" maxlength="500" oninput="updateCounter('counter-short', 'short-desc')"></textarea>

@@ -34,7 +34,7 @@ if (likes !==null && likes.length>0) {
         }
     }
 } else {
-    favSectionsContainer.innerHTML = `<article id="nothing-is-here"><b>Nothing is here</b><br>Try to like some routes in All routes tab<div><button id="all-routes-btn" onclick="navigateToPage('all-routes.html')">All routes</button></div></article>`
+    favSectionsContainer.innerHTML = `<article class="center" id="nothing-is-here" xmlns="http://www.w3.org/1999/html"><b>Nothing is here</b><br>Try to like some routes in All routes tab<div><button id="all-routes-btn" onclick="navigateToPage('all-routes.html')">All routes</button></div></article>`
 }
 
 function unlike(recordId){
