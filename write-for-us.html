@@ -1,71 +1,130 @@
+<!-- Declaration the document type as HTML5 -->
 <!DOCTYPE html>
+<!-- Specification that the language of the document is English -->
 <html lang="en">
+<!-- Container for metadata (data about data) -->
 <head>
+    <!-- Specification the character encoding of the document as UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Set the viewport to the width of the device's screen and ensure that the initial scale is set to 1.0-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Link to an external CSS file with BoxIcons from the provided URL -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <!-- Links to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- The title of the HTML document -->
     <title>World on wheels</title>
 </head>
 <body>
+<!-- Button to open side navigation menu -->
 <div id="nav-btn"><span id="open-nav" onclick="openNav()">&#9776;</span></div>
+<!-- Navigation menu -->
 <nav id="sidenav">
+    <!-- Button to close side navigation menu -->
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
+    <!-- Navigation links -->
     <a href="index.html">Home</a>
     <a href="all-routes.html">All routes</a>
     <a href="favourite-routes.html">Favourite routes</a>
+    <!-- Theme change button -->
     <i title="Change theme" class="bx bx-toggle-left change-theme" id="theme-button"></i>
 </nav>
 <main>
+    <!-- Heading for the 'Write for us' section -->
     <h2>Write for us</h2>
+    <!-- Section for writing content for the publication -->
     <section id="write-for-us">
-        <form>
+        <!-- Form for submitting content -->
+        <form onsubmit="return submitForm();">
+            <!-- Container for form elements -->
             <div id="write-for-us-container">
-            <label for="start">Start:</label><input type="text" id="start">
-            <label for="end">End:</label><input type="text" id="end">
-            <label for="distance">Distance:</label>
-                <label for="unit"><input type="number" min="1" id="distance">
-                <select name="unit" id="unit">
-                <option value="kilometers">Kilometers</option>
-                <option value="miles">Miles</option>
-            </select></label>
-            <span style="grid-column:1/3">Please choose how you would like to be mentioned in the publication:</span>
-            <label for="name-radio"><input type="radio" name="name" id="name-radio" onclick="inputDisabled(false)" autocomplete="false">Name:</label>
-            <input type="text" id="name" value="Napoléon Bonaparte" autocomplete="name" disabled>
-            <label for="anonymous" style="grid-column:1/3"><input type="radio" name="name" id="anonymous" onclick="inputDisabled(true)" autocomplete="false">Remain Anonymous</label>
+                <!-- Label and input field for starting point -->
+                <label for="start">Start:</label>
+                <input type="text" id="start" required>
+                <!-- Label and input field for ending point -->
+                <label for="end">End:</label>
+                <input type="text" id="end" required>
+                <!-- Label for distance and input field with unit selection -->
+                <label for="distance">Distance:</label>
+                <!-- Input field for distance -->
+                <span><input type="number" min="1" id="distance" required>
+                <label for="unit">
+                    <!-- Dropdown for unit selection -->
+                    <select name="unit" id="unit">
+                        <!-- Option for kilometers -->
+                        <option value="kilometers">Kilometers</option>
+                        <!-- Option for miles -->
+                        <option value="miles">Miles</option>
+                    </select>
+                </label> </span>
+                <br>
+                <!-- Information about how the contributor wants to be mentioned -->
+                <span style="grid-column:1/3">Please choose how you would like to be mentioned in the publication:</span>
+                <!-- Radio button option for specifying name -->
+                <label for="name-radio">
+                    <input type="radio" name="name" id="name-radio" onclick="inputDisabled(false)" required>Name:
+                </label>
+                <!-- Input field for name -->
+                <input type="text" id="name" value="Napoléon Bonaparte" autocomplete="name" disabled>
+                <!-- Radio button option for remaining anonymous -->
+                <label for="anonymous" style="grid-column:1/3">
+                    <input type="radio" name="name" id="anonymous" onclick="inputDisabled(true)">Remain Anonymous
+                </label>
             </div>
+            <!-- Line break for spacing -->
             <br>
+            <!-- Label for short description -->
             <label for="short-desc">Write short description here:</label><br>
+            <!-- Container for textarea and character counter for short description -->
             <div class="textarea-container">
-                <textarea class="textarea" id="short-desc" rows="12" cols="50" maxlength="500" oninput="updateCounter('counter-short', 'short-desc')"></textarea>
+                <!-- Textarea for short description -->
+                <textarea class="textarea" id="short-desc" rows="12" cols="50" maxlength="500" oninput="updateCounter('counter-short', 'short-desc')" required></textarea>
+                <!-- Character counter for short description -->
                 <div class="counter" id="counter-short">0/500</div>
             </div>
+            <!-- Line break for spacing -->
             <br>
-
+            <!-- Label for long description -->
             <label for="long-desc">Write long description here:</label><br>
+            <!-- Container for textarea and character counter for long description -->
             <div class="textarea-container">
-                <textarea class="textarea" id="long-desc" rows="28" cols="100" maxlength="2500" oninput="updateCounter('counter-long', 'long-desc')"></textarea>
+                <!-- Textarea for long description -->
+                <textarea class="textarea" id="long-desc" rows="28" cols="100" maxlength="2500" oninput="updateCounter('counter-long', 'long-desc')" required></textarea>
+                <!-- Character counter for long description -->
                 <div class="counter" id="counter-long">0/2500</div>
             </div>
-
+            <!-- Line break for spacing -->
             <br>
-            <label for="accept"><input type="checkbox" id="accept"> I accept the Terms of Use & Privacy Policy</label>
+            <!-- Checkbox for accepting terms of use and privacy policy -->
+            <label for="accept"><input type="checkbox" id="accept" required> I accept the Terms of Use & Privacy Policy</label>
+            <div>
+            <!-- Submit button -->
+            <input id="submit-btn" type="submit">
+            </div>
         </form>
     </section>
+
 </main>
 
-<footer id="footer">
+<!-- Footer section -->
+<!-- will be generated with JS -->
+<footer id="footer"></footer>
 
-</footer>
-
+<!-- JavaScript files -->
 <script src="js/script.js"></script>
 <script src="js/sidenav.js"></script>
+<script src="js/walidation.js"></script>
+<!-- JavaScript code to auto-adjust the width of textarea elements based on window resize -->
 <script>
+    // Event listener for window resize
     window.addEventListener('resize', areaAutoSize);
 
+    // Function to auto-adjust textarea width
     function areaAutoSize() {
+        // Get references to the long and short description textarea elements
         let longD = document.getElementById("long-desc");
         let shortD = document.getElementById("short-desc");
+        // Set the width of the long and short description textarea elements to 100%
         longD.style.width='100%';
         shortD.style.width='100%';
     }
