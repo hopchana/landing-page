@@ -1,50 +1,48 @@
 /*==================== Black theme ====================*/
+// Theme toggle button and icon classes
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "bx-toggle-right";
 
-// Previously selected topic (if user selected)
+// Previously selected theme and icon (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
+// Function to get the current theme and icon
 const getCurrentTheme = () =>
     document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-    themeButton.classList.contains(iconTheme)
-        ? "bx-toggle-left"
-        : "bx-toggle-right";
+    themeButton.classList.contains(iconTheme) ? "bx-toggle-left" : "bx-toggle-right";
 
-// We validate if the user previously chose a topic
+// Apply previously selected theme and icon
 if (selectedTheme) {
-    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-        darkTheme
-    );
-    themeButton.classList[selectedIcon === "bx-toggle-left" ? "add" : "remove"](
-        iconTheme
-    );
+    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
+    themeButton.classList[selectedIcon === "bx-toggle-left" ? "add" : "remove"](iconTheme);
 }
 
-// Activate / deactivate the theme manually with the button
+// Toggle theme when the button is clicked
 themeButton.addEventListener("click", () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme);
     themeButton.classList.toggle(iconTheme);
-    // We save the theme and the current icon that the user chose
+
+    // Save the theme and icon preference
     localStorage.setItem("selected-theme", getCurrentTheme());
     localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
 
 /*==================== Footer ====================*/
+// Footer content setup
 let footer = document.getElementById("footer");
 footer.innerHTML = `<div class="footer-wrapper">
             <div class="footer-columns">
                 <div class="link-columns">
+                    <!-- Company links -->
                     <section>
                         <h3>Company</h3>
                         <ul>
+                        <!-- Links to various pages -->
                             <li>
                                 <a href="#" title="About">About World on wheels</a>
                             </li>
@@ -65,9 +63,11 @@ footer.innerHTML = `<div class="footer-wrapper">
                             </li>
                         </ul>
                     </section>
+                    <!-- Top destinations links -->
                     <section>
                         <h3>Top destinations</h3>
                         <ul>
+                         <!-- Links to more-info pages -->
                             <li>
                                 <a href="more-info.html?name=namibia">Southern Namibia</a>
                             </li>
@@ -79,9 +79,11 @@ footer.innerHTML = `<div class="footer-wrapper">
                             </li>
                         </ul>
                     </section>
+                    <!-- Games links -->
                     <section>
                         <h3>Games</h3>
                         <ul>
+                        <!-- Links to games -->
                             <li>
                                 <a href="memory-card-game.html" title="Memory Card Game">Memory Card Game</a>
                             </li>
@@ -99,36 +101,33 @@ footer.innerHTML = `<div class="footer-wrapper">
                 </div>
             </div>
         </div>
-        <!-- bottom part section -->
+        <!-- Footer bottom section -->
         <div class="footer-bottom">
             <div class="footer-bottom-wrapper">
+                <!-- Display current year -->
                 © <span id="year"></span> Anastasiia Hopchuk
             </div>
         </div>`;
+// Update the year dynamically
 document.getElementById("year").innerHTML = new Date().getFullYear().toString();
 
-function scrollToSection(sectionId) {
-    let section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-}
-
+// Function to navigate to a page
 function navigateToPage(pageUrl) {
     window.location.href = pageUrl;
 }
 
+// Function to generate more info for a specific route
 function generateMoreInfo(name) {
     window.location.href = `more-info.html?name=${name}`;
 }
 
+// Function to enable/disable input field based on radio button
 function inputDisabled(id) {
     document.getElementById("name").disabled = id;
-    document.getElementById("name").value="";
+    document.getElementById("name").value = "";
 }
 
+// Function to update character counter in a textarea
 function updateCounter(counterId, textareaId) {
     // Get references to the textarea and counter elements
     let counter = document.getElementById(counterId);
@@ -139,8 +138,9 @@ function updateCounter(counterId, textareaId) {
     let maxLength = parseInt(textarea.getAttribute('maxlength'));
     // Update counter text
     counter.textContent = `${currentLength}/${maxLength}`;
-    if (currentLength>=(maxLength/1.25).toFixed(0))
-        counter.style.color='red';
+    // Change counter color based on character limit
+    if (currentLength >= (maxLength / 1.25).toFixed(0))
+        counter.style.color = 'red';
     else
-        counter.style.color='gray';
+        counter.style.color = 'gray';
 }

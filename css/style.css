@@ -289,27 +289,54 @@ input#distance {
     border: rgb(118, 118, 118) solid 1px;
 }
 
-.more-info-images {
-    img {
-        height: 100%;
-    }
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
+/* Targets the element with the id "submit-btn" */
+input#submit-btn {
+    /* Sets the background color to none */
+    background: none;
+    /* Sets the border with a color and style */
+    border: 1px solid var(--text-color);
+    /* Sets the text color using a variable, so it will change with theme change */
+    color: var(--text-color);
+    /* Changes the cursor to a pointer on hover */
+    cursor: pointer;
+    /* Sets the font size to 16 pixels */
+    font-size: 16px;
+    /* Sets the letter spacing */
+    letter-spacing: 3px;
+    /* Sets the height of the button to 40 pixels */
+    height: 40px;
+    /* Sets the top margin */
+    margin-top: 1rem;
+    /* Sets the width of the button to 60% of its containing block */
+    width: 100%;
+    max-width: 750px;
+    /* Adds a transition effect */
+    transition: 0.4s;
 }
+
+/* Styles for images within the more-info section */
+.more-info-images img {
+    height: 100%; /* Set the height of images to 100% */
+}
+
+/* Grid layout for the more-info-images container */
+.more-info-images {
+    display: grid; /* Use grid display */
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    grid-template-rows: 1fr 1fr 1fr; /* Three rows with equal height */
+    gap: 10px; /* Gap between grid items */
+}
+
+/* Styling for the map container */
+#map {
+    height: 350px; /* Set the height of the map container to 350px */
+}
+
 
 /*========== ALL ROUTES / FAVOURITE ROUTES PAGE ==========*/
 
 /* Targets elements with the class "article-section" and applies grid layout styling */
-.article-section {
-    /* Targets img elements within elements with the class "article-section" and applies styling */
-    img {
-        /* Sets the height of the image to 100% */
-        height: 100%;
-        /* Spans the image across the first and second rows of the grid */
-        grid-row: 1/3;
-    }
+ .article-section {
     /* Sets the display property to grid, making the element a grid container */
     display: grid;
     /* Defines one column that takes up the entire width of the container */
@@ -324,6 +351,14 @@ input#distance {
     padding: 20px;
     /* Allows content overflow with a scrollbar when necessary */
     overflow: auto;
+}
+
+/* Targets img elements within elements with the class "article-section" and applies styling */
+.article-section img {
+    /* Sets the height of the image to 100% */
+    height: 100%;
+    /* Spans the image across the first and second rows of the grid */
+    grid-row: 1/3;
 }
 
 /* Targets elements with the class "article-section" on hover and applies a box shadow */
@@ -390,7 +425,7 @@ input#distance {
 }
 
 /* Targets elements with the class "more-info-btn" and elements with the id "all-routes-btn" on hover*/
-.more-info-btn:hover, #all-routes-btn:hover {
+.more-info-btn:hover, #all-routes-btn:hover, #submit-btn:hover {
     /* Scales the button down to 95% on hover */
     transform: scale(0.95);
 }
@@ -462,6 +497,8 @@ input#distance {
 #above-the-fold span {
     /* Aligns content vertically to the center */
     align-content: center;
+    /* Aligns items along the cross axis (vertically) */
+    align-self: center;
     /* Aligns text the span to the center */
     text-align: center;
     /* Places the span in the second column of the grid */
@@ -507,8 +544,6 @@ input#distance {
     /* Sets the bottom margin */
     margin-bottom: 1rem;
     /* Aligns text within the button to the center */
-    text-align: center;
-    /* Sets the width of the button to 60% of its containing block */
     width: 60%;
     /* Adds a transition effect */
     transition: 0.4s;
@@ -670,10 +705,130 @@ footer {
     color: var(--text-color);
 }
 
+/*========== MEMORY CARD GAME ==========*/
+
+/* Styles for the memory card game container */
+#memory-card-game {
+    display: flex; /* Display the container as a flexbox */
+    align-items: center; /* Align items vertically at the center */
+    justify-content: center; /* Align items horizontally at the center */
+}
+
+/* Styles for the wrapper element */
+.wrapper {
+    padding: 25px; /* Add padding around the wrapper */
+}
+
+/* Styles for the cards container and card elements */
+#cards, .card, .view {
+    display: flex; /* Display the elements as flexboxes */
+    align-items: center; /* Align items vertically at the center */
+    justify-content: center; /* Align items horizontally at the center */
+}
+
+/* Styles for the cards container */
+#cards {
+    height: 300px; /* Set height of the cards container */
+    width: 300px; /* Set width of the cards container */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-between; /* Distribute space between cards */
+}
+
+/* Styles for individual cards */
+#cards .card {
+    cursor: pointer; /* Set cursor to pointer */
+    list-style: none; /* Remove bullet points */
+    user-select: none; /* Disable selection of card content */
+    position: relative; /* Set position to relative */
+    perspective: 1000px; /* Set perspective for 3D effect */
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+    height: calc(100% / 4 - 10px); /* Calculate height of each card */
+    width: calc(100% / 4 - 10px); /* Calculate width of each card */
+}
+
+/* Animation for shaking effect */
+.card.shake {
+    animation: shake 0.35s ease-in-out; /* Apply shake animation */
+}
+
+/* Keyframes for shake animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0); /* Initial and final positions */
+    }
+    20% {
+        transform: translateX(-13px); /* 20% position */
+    }
+    40% {
+        transform: translateX(13px); /* 40% position */
+    }
+    60% {
+        transform: translateX(-8px); /* 60% position */
+    }
+    80% {
+        transform: translateX(8px); /* 80% position */
+    }
+}
+
+/* Styles for the front and back views of cards */
+.card .view {
+    width: 100%; /* Set width of the view */
+    height: 100%; /* Set height of the view */
+    position: absolute; /* Set position to absolute */
+    border-radius: 7px; /* Add border radius */
+    pointer-events: none; /* Disable pointer events */
+    backface-visibility: hidden; /* Hide backface of the view */
+    transition: transform 0.25s linear; /* Apply transition effect */
+}
+
+/* Styles for the front view */
+.card .front-view {
+    background: #beb8b1; /* Set background color */
+}
+
+/* Styles for the back view */
+.card .back-view {
+    background: #fcfbf9; /* Set background color */
+}
+
+/* Styles for images inside card views */
+.card .front-view img,
+.card .back-view img {
+    width: 85%; /* Set width of the image */
+    height: 85%; /* Set height of the image */
+}
+
+/* Initial rotation for back view */
+.card .back-view {
+    transform: rotateY(-180deg); /* Rotate back view */
+}
+
+/* Rotation for flipped card's back view */
+.card.flip .back-view {
+    transform: rotateY(0); /* Rotate back view */
+}
+
+/* Rotation for flipped card's front view */
+.card.flip .front-view {
+    transform: rotateY(180deg); /* Rotate front view */
+}
+
+/* Media queries for responsive design */
+
 /*========== tiny mobile ==========*/
 
 /* Media query for screens with a maximum width of 245px */
 @media screen and (max-width: 245px) {
+
+    #cards .card {
+        height: calc(100% / 8 - 5px); /* Adjust height of each card */
+        width: calc(100% / 2 - 5px); /* Adjust width of each card */
+    }
+    #cards {
+        height: 480px; /* Adjust height of the cards container */
+        width: 120px; /* Adjust width of the cards container */
+    }
+
     /* Hides images inside elements with the id "above-the-fold" */
     #above-the-fold img {
         display: none;
@@ -728,6 +883,16 @@ footer {
 /*small mobile*/
 /* Media query for screens with a minimum width of 245px and maximum width of 320px */
 @media screen and (min-width: 245px) and (max-width: 320px) {
+
+    #cards .card {
+        height: calc(100% / 4 - 5px); /* Adjust height of each card */
+        width: calc(100% / 4 - 5px); /* Adjust width of each card */
+    }
+    #cards {
+        height: 225px; /* Adjust height of the cards container */
+        width: 225px; /* Adjust width of the cards container */
+    }
+
     /* Targets the element with the id "all-routes-btn" and applies styling */
     #all-routes-btn {
         /* Sets width to 75% */
@@ -788,6 +953,12 @@ footer {
 /*mobile: landscape*/
 /* Media query for screens with a minimum width of 480px */
 @media screen and (min-width: 480px) {
+
+    #cards {
+        height: 400px; /* Adjust height of the cards container */
+        width: 400px; /* Adjust width of the cards container */
+    }
+
     /* Hides elements with the id "open-nav" and elements with the class "close-nav-btn" */
     #open-nav, nav .close-nav-btn{
         display: none;
@@ -931,6 +1102,17 @@ footer {
 /*tablet: portrait*/
 /* Media query for screens with a minimum width of 768px */
 @media screen and (min-width: 768px) {
+
+    /* Styling for the map container */
+    #map {
+        height: 500px;
+    }
+
+    #cards {
+        height: 450px; /* Adjust height of the cards container */
+        width: 450px; /* Adjust width of the cards container */
+    }
+
     /* Targets elements with the id "img4-top" and "img4-bottom" and applies styling */
     #img4-top, #img4-bottom {
         /* Sets display property to grid */
@@ -1026,17 +1208,10 @@ footer {
         /* Sets letter spacing to 0.4rem */
         letter-spacing: 0.4rem;
     }
+
     /* Targets elements with the class "article-section" and applies styling */
     .article-section {
-        /* Targets images inside elements with the class "article-section" and applies styling */
-        img {
-            /* Adds border on the right side */
-            border-right: var(--light) solid 2px;
-            /* Adds padding on the right side */
-            padding-right: 20px;
-            /* Spans the image across the first and second rows of the grid */
-            grid-row: 1/3;
-        }
+
         /* Sets grid template columns to two equal columns */
         grid-template-columns: 1fr 1fr;
         /* Sets grid template rows to one fraction and auto */
@@ -1046,6 +1221,17 @@ footer {
         /* Sets maximum width to 992px */
         max-width: 992px;
     }
+
+    /* Targets images inside elements with the class "article-section" and applies styling */
+    .article-section img {
+        /* Adds border on the right side */
+        border-right: var(--light) solid 2px;
+        /* Adds padding on the right side */
+        padding-right: 20px;
+        /* Spans the image across the first and second rows of the grid */
+        grid-row: 1/3;
+    }
+
     /* Targets elements with the class "section-content" and applies styling */
     .section-content {
         /* Sets top margin to 0 */

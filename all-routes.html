@@ -1,29 +1,45 @@
+<!-- Declaration the document type as HTML5 -->
 <!DOCTYPE html>
+<!-- Specification that the language of the document is English -->
 <html lang="en">
+<!-- Container for metadata (data about data) -->
 <head>
+    <!-- Specification the character encoding of the document as UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Set the viewport to the width of the device's screen and ensure that the initial scale is set to 1.0-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Link to an external CSS file with BoxIcons from the provided URL -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <!-- Links to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- The title of the HTML document -->
     <title>World on wheels</title>
 </head>
 <body>
+<!-- Button to open side navigation menu -->
 <div id="nav-btn"><span id="open-nav" onclick="openNav()">&#9776;</span></div>
+<!-- Navigation menu -->
 <nav id="sidenav">
+    <!-- Button to close side navigation menu -->
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
+    <!-- Navigation links -->
     <a href="index.html">Home</a>
     <a id="active" href="all-routes.html">All routes</a>
     <a href="favourite-routes.html">Favourite routes</a>
+    <!-- Theme change button -->
     <i title="Change theme" class="bx bx-toggle-left change-theme" id="theme-button"></i>
 </nav>
 <main>
     <section id="all-routes">
-
+        <!-- Content for all routes section goes here -->
     </section>
 </main>
 
+<!-- Footer section -->
+<!-- will be generated with JS -->
 <footer id="footer"></footer>
 
+<!-- JavaScript files -->
 <script src="js/script.js"></script>
 <script src="js/sidenav.js"></script>
 <script src="js/routes.js"></script>

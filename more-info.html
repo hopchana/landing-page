@@ -1,57 +1,83 @@
+<!-- Declaration the document type as HTML5 -->
 <!DOCTYPE html>
+<!-- Specification that the language of the document is English -->
 <html lang="en">
+<!-- Container for metadata (data about data) -->
 <head>
+    <!-- Character encoding metadata -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Viewport metadata for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheet for boxicons -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <!-- External stylesheet for custom styles -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- External stylesheet for Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- External JavaScript library for Leaflet -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- External JavaScript plugin for GPX support in Leaflet -->
     <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/shramov/leaflet-plugins@master/layer/vector/GPX.js'></script>
-
+    <!-- Title of the document -->
     <title>World on wheels</title>
+    <!-- Internal CSS styles -->
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        /* CSS style for body */
         body {
             max-width: 992px;
         }
     </style>
 </head>
 <body>
+<!-- Navigation button -->
 <div id="nav-btn"><span id="open-nav" onclick="openNav()">&#9776;</span></div>
+<!-- Side navigation menu -->
 <nav id="sidenav">
+    <!-- Close navigation button -->
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
+    <!-- Navigation links -->
     <a href="index.html">Home</a>
     <a href="all-routes.html">All routes</a>
     <a href="favourite-routes.html">Favourite routes</a>
+    <!-- Theme change icon -->
     <i title="Change theme" class="bx bx-toggle-left change-theme" id="theme-button"></i>
 </nav>
 <main>
+    <!-- More info section -->
+    <!-- Loads from server -->
     <section id="more-info" class="more-info"></section>
 
+    <!-- Weather section -->
     <section id="weather"  class="center">
-            <h2 id="location"></h2>
-            <div id="weather-info">
-                <img id="icon" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="icon">
-                <h2 id="temperature"></h2>
-            </div>
+        <!-- Location heading -->
+        <h2 id="location"></h2>
+        <!-- Weather information container -->
+        <div id="weather-info">
+            <!-- Weather icon -->
+            <img id="icon" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="icon">
+            <!-- Temperature heading -->
+            <h2 id="temperature"></h2>
+        </div>
     </section>
+    <!-- Route on map section -->
     <section>
         <br>
+        <!-- Heading for route on map -->
         <h2 class="center">Route on map</h2>
         <br>
-        <div id="map" style="height: 30rem"></div>
+        <!-- Map container -->
+        <div id="map" style=""></div>
     </section>
-
 </main>
 
+<!-- Footer section -->
+<!-- will be generated with JS -->
 <footer id="footer"></footer>
 
+<!-- JavaScript files -->
 <script src="js/script.js"></script>
-<script src="js/more-info.js"></script>
 <script src="js/sidenav.js"></script>
+<script src="js/more-info.js"></script>
 
 </body>
 </html>

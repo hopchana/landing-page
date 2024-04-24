@@ -1,17 +1,18 @@
+// Get the container for all article sections
 const articleSectionsContainer = document.getElementById('all-routes');
 
-// Loop through tabRecords and generate HTML for each section
+// Loop through the routes array and generate HTML for each section
 routes.forEach((record, index) => {
+    // Generate HTML for each section dynamically
     const sectionHTML = `
         <article class="article-section">
-            <img src="${record.img}" alt=${record.alt}"">
+            <img src="${record.img}" alt="${record.alt}">
             <div class="section-content">
                 <div class="section-heading">
                     <h2>${record.name}</h2>
                     <button id="${record.id}-like-btn" class="like-btn" onclick='like("${record.id}")'>
-                        <svg viewBox="0 0 24 24"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path  d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/>
                         </svg>
                     </button>
                 </div>
@@ -19,22 +20,28 @@ routes.forEach((record, index) => {
                 <br><strong>End:</strong> ${record.end}
                 <br><strong>Distance:</strong> ${record.distance}
                 <br>${record.about}
-                
             </div>
             <button class="more-info-btn" onclick="generateMoreInfo('${record.id}')">More</button>
         </article>
     `;
 
+    // Append the generated HTML to the container
     articleSectionsContainer.innerHTML += sectionHTML;
 });
 
-
-// Function to add "liked" class to buttons if they were previously liked
+// Function to add the "liked" class to buttons for previously liked routes
 function addLikedClassToButtons() {
+    // Retrieve the array of liked routes from session storage
     let likes = JSON.parse(sessionStorage.getItem('likes'));
+
+    // Check if there are liked routes
     if (likes) {
+        // Iterate over each liked route
         likes.forEach((like) => {
+            // Get the button element corresponding to the liked route
             let button = document.getElementById(`${like}-like-btn`);
+
+            // Add the "liked" class to the button if it exists
             if (button !== null) {
                 button.classList.add("liked");
             }
@@ -42,52 +49,32 @@ function addLikedClassToButtons() {
     }
 }
 
-// Call the function after appending the elements
+// Call the function to add "liked" class after appending the elements
 addLikedClassToButtons();
 
-const likeButtons = document.querySelectorAll(".like-btn");
-
+// Function to handle like button clicks
 function like(recordId){
+    // Retrieve the array of liked routes from session storage
     let likes = JSON.parse(sessionStorage.getItem('likes'));
-    if (likes === null) likes = []; //pracujemy z tablicą obiektów
+
+    // Create an empty array if no liked routes exist yet
+    if (likes === null) likes = [];
+
+    // Get the like button element by ID
     let likeButton = document.getElementById(`${recordId}-like-btn`);
+
+    // Toggle the "liked" class on the button and add or remove the record ID from the likes array
     if (likeButton.classList.toggle("liked")) {
-        likes.push(recordId); //dodaj nowy obiekt do listy
+        likes.push(recordId); // Add the record ID to the likes array
     } else {
+        // Find and remove the record ID from the likes array
         let i;
         for (i = 0; i < likes.length; i++) {
             if (likes[i] === recordId) break;
         }
         likes.splice(i,1);
     }
+
+    // Store the updated likes array in session storage
     sessionStorage.setItem('likes', JSON.stringify(likes));
 }
-
-// function readAll() {
-//     let likes = JSON.parse(localStorage.getItem('likes'));
-//     if (likes!=null) {
-//         let data = "";
-//         for (let i = 0; i < likes.length; i++) {
-//             data += "<tr>" +
-//                 "<td><button onclick='deleteItem("+i+")'> X </button></td>" +
-//                 "<td>" + items[i].name + "</td>" +
-//                 "<td>" + items[i].price + "</td>" +
-//                 "<td>" + items[i].color + "</td>" +
-//                 "<td>" + items[i].quantity + "</td>" +
-//                 "</tr>";
-//         }
-//         data += "</table>";
-//         basketData.innerHTML = data;
-//     }
-//     else {
-//         basketData.innerHTML = "<h3>Koszyk jest pusty</h3>";
-//     }
-// }
-//
-// function deleteItem(i) {
-//     let likes = JSON.parse(localStorage.getItem('liked'));
-//     //usuń i-ty element z listy zadań:
-//     likes.splice(i,1);
-//     //zapisz zaktualizowaną listę w localStorage:
-//     localStorage.setItem('liked', JSON.stringify(likes)); //zapisz listę
-// }
