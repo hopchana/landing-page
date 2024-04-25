@@ -68,3 +68,27 @@ function submitForm() {
     else alert(alertText.substring(1))
     return isOK;
 }
+
+// Function to enable/disable input field based on radio button
+function inputDisabled(id) {
+    document.getElementById("name").disabled = id;
+    document.getElementById("name").value = "";
+}
+
+// Function to update character counter in a textarea
+function updateCounter(counterId, textareaId) {
+    // Get references to the textarea and counter elements
+    let counter = document.getElementById(counterId);
+    let textarea = document.getElementById(textareaId);
+    // Get current number of characters entered
+    let currentLength = textarea.value.trim().length;
+    // Get maximum allowed characters
+    let maxLength = parseInt(textarea.getAttribute('maxlength'));
+    // Update counter text
+    counter.textContent = `${currentLength}/${maxLength}`;
+    // Change counter color based on character limit
+    if (currentLength >= (maxLength / 1.25).toFixed(0))
+        counter.style.color = 'red';
+    else
+        counter.style.color = 'gray';
+}

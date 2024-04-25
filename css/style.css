@@ -14,308 +14,245 @@ body.dark-theme {
     --text-color: #beb8b1;
 }
 
+/* Targets all elements */
 * {
-    /*include the padding and border in an element's total width and height*/
-    box-sizing: border-box;
-    /* Ensuring no space is added outside of the element */
-    margin: 0;
-    /* Ensuring no space is added inside of the element */
-    padding: 0;
+    box-sizing: border-box; /*include the padding and border in an element's total width and height*/
+    margin: 0; /* Ensuring no space is added outside of the element */
+    padding: 0; /* Ensuring no space is added inside of the element */
 }
 
-/* Targets the body element and applies styling */
+/* Targets the body element */
 body {
-    /* Set the background color using variable, so it will change with theme change */
-    background: var(--body-color);
-    /* Center the body horizontally */
-    margin: 0 auto;
-    /* Set the maximum width of the body to 98% of its containing block */
-    max-width: 98%;
-    /* Set the text color using variable, so it will change with theme change */
-    color: var(--text-color);
-    /* Add a smooth transition effect */
-    transition: 0.4s;
+    background: var(--body-color); /* Set the background color using var(--body-color), so it will change with theme change */
+    margin: 0 auto; /* Center the body horizontally */
+    max-width: 98%; /* Set the maximum width of the body to 98% of its containing block */
+    color: var(--text-color); /* Set the text color using var(--text-color), so it will change with theme change */
+}
+
+/* Targets images inside elements with the id "above-the-fold", the element with the id "all-routes-btn",
+elements with the class "more-info-btn", the element with the id "submit-btn", i elements,
+anchor elements inside nav elements, body element */
+#above-the-fold img, #all-routes-btn, .more-info-btn, input#submit-btn, i, nav a, body {
+    transition: 0.4s; /* Adds a smooth transition effect for all property changes over 0.4 seconds */
 }
 
 /* Style for the main element */
 main {
-    /* Add margin around content */
-    margin: 8px;
+    margin: 8px; /* Add 8px margin around content */
 }
 
-/* Targets h1 elements and applies styling */
+/* Targets h1 elements */
 h1 {
-    /* Set the font size */
-    font-size: 40px;
-    /* Set no top margin */
-    margin-top: 0;
-    /* Set the bottom margin */
-    margin-bottom: 0.2em;
-    /* Set the letter spacing */
-    letter-spacing: 0.04rem;
+    font-size: 40px; /* Set the font size to 40px */
+    margin-top: 0; /* sets top margin to 0, removing any default top margin*/
+    margin-bottom: 0.2em; /* Set the bottom margin to 0.2em  */
+    letter-spacing: 0.04rem; /* Set the letter spacing to 0.04rem*/
 }
 
-/* Targets h2 elements and applies styling */
+/* Targets h2 elements */
 h2 {
-    /* Set the font size */
-    font-size: 26px;
-    /* Set no letter spacing */
-    letter-spacing: 0;
-    /* Set no top margin */
-    margin-top: 0;
-    /* Sets the bottom margin */
-    margin-bottom: 0.2em;
+    font-size: 26px; /* Set the font size to 26px */
+    letter-spacing: 0; /* Set letter spacing to 0 */
+    margin-top: 0; /* Set top margin to 0 */
+    margin-bottom: 0.2em; /* Sets the bottom margin to 0.2em */
 }
 
 /* Targets section elements */
 section {
-    /* set the font size */
-    font-size: 16px;
+    font-size: 16px; /* set the font size to 16px */
 }
 
 .center {
-    /*align the text to the center*/
-    text-align: center;
+    text-align: center; /*align the text to the center*/
 }
 
 /*========== mobile portrait ==========*/
 
 /*========== NAVIGATION ==========*/
 
-/* Targets nav elements and applies styling */
+/* Targets nav elements */
 nav {
-    /* Sets height to 100% */
-    height: 100%;
-    /* Sets the position to fixed */
-    position: fixed;
-    /* Sets the z-index to 1 */
-    z-index: 1;
-    /* Positions the nav at the top of the viewport */
-    top: 0;
-    /* Hides horizontal overflow */
-    overflow-x: hidden;
-    /* Adds transition effect for all property changes over 0.5 seconds */
-    transition: 0.5s;
-    /* Adds padding on the top side */
-    padding-top: 60px;
-    /* Positions the nav at the right of the viewport */
-    right: 0;
-    /* Adds margin on the bottom side */
-    margin-bottom: 1rem;
-    /* Sets background color using a custom CSS variable */
+    position: fixed; /* Sets the position to fixed */
+    z-index: 1; /* Sets the z-index to 1 */
+    top: 0; /* Positions the nav at the top of the viewport */
+    overflow-x: hidden; /* Hides horizontal overflow */
+    transition: 0.5s; /* Adds transition effect for all property changes over 0.5 seconds */
+    padding-top: 60px; /* Adds 60px padding on the top side */
+    right: 0; /* Positions the nav at the right of the viewport */
+    margin-bottom: 1rem; /* Adds 1rem margin on the bottom side */
+    /* Sets background color using var(--body-color), so it will change with theme change */
     background: var(--body-color);
 }
 
-/* Targets anchor elements inside nav elements and applies styling */
+/* Targets anchor elements inside nav elements */
 nav a {
-    /* Sets font size to 20px */
-    font-size: 20px;
-    /* Sets text color using a custom CSS variable */
-    color: var(--light);
-    /* Sets letter spacing to 3px */
-    letter-spacing: 3px;
-    /* Sets padding on all sides except left */
+    font-size: 20px; /* Sets font size to 20px */
+    color: var(--light); /* Sets text color using var(--light), so it will change with theme change */
+    letter-spacing: 3px; /* Sets letter spacing to 3px */
+    /* Sets padding for the right, top and bottom to 0.4em, and for the left side of the element to 12%
+    of the width of the containing block */
     padding: 0.4em 0.4em 0.4em 12%;
-    /* Removes underline from links */
-    text-decoration: none;
-    /* Sets display property to block */
-    display: block;
-    /* Adds transition effect for all property changes over 0.4 seconds */
-    transition: 0.4s;
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Sets display property to block */
 }
 
-/* Targets i elements and applies styling */
+/* Targets i elements */
 i {
-    /* Adds padding on the left side */
-    padding-left: 11%;
-    /* Removes margin */
-    margin: 0;
-    /* Sets text color using a custom CSS variable */
-    color: var(--light);
-    /* Sets font size to 40px */
-    font-size: 40px;
-    /* Changes cursor to pointer */
-    cursor: pointer;
-    /* Adds transition effect for all property changes over 0.4 seconds */
-    transition: 0.4s;
+    padding-left: 11%; /* Adds 11% of the width of the containing block padding on the left side */
+    color: var(--light); /* Sets text color using var(--light), so it will change with theme change */
+    font-size: 40px; /* Sets font size to 40px */
+    cursor: pointer; /* Changes cursor to pointer */
 }
 
-/* Targets anchor elements inside nav elements on hover and applies styling */
+/* Targets anchor elements inside nav elements on hover */
 nav a:hover {
-    /* Changes text color on hover using a custom CSS variable */
+    /* Changes text color on hover using var(--text-color), so it will change with theme change */
     color: var(--text-color);
-    /* Adds transition effect for all property changes over 0.3 seconds */
-    transition: 0.3s;
+    transition: 0.3s; /* Adds transition effect for all property changes over 0.3 seconds */
 }
 
-/* Targets elements with the class "close-nav-btn" inside nav elements and applies styling */
+/* Targets elements with the class "close-nav-btn" inside nav elements */
 nav .close-nav-btn {
-    /* Removes padding */
-    padding: 0;
-    /* Removes margin on the left and right sides */
-    margin: 0 8px;
-    /* Sets position to absolute */
-    position: absolute;
+    padding: 0; /* Removes padding */
+    margin: 0 8px; /* Removes margin on the top and bottom, sets the right and left margins to 8 pixels */
+    position: absolute; /* Sets position to absolute */
     /* Positions the element at the top right corner of its containing block */
     top: 0;
     right: 0;
-    /* Sets font size to 45px */
-    font-size: 45px;
+    font-size: 45px; /* Sets font size to 45px */
 }
 
-/* Targets elements with the class "close-nav-btn" inside nav elements on hover and applies styling */
+/* Targets elements with the class "close-nav-btn" inside nav elements on hover */
 nav .close-nav-btn:hover {
-    /* Sets background color to none */
-    background: none;
+    background: none; /* Sets background color to none */
 }
 
-/* Targets elements with the id "open-nav" and applies styling */
+/* Targets elements with the id "open-nav" */
 #open-nav {
-    /* Adds margin */
-    margin: 8px;
-    /* Sets font size to 30px */
-    font-size: 30px;
-    /* Changes cursor to pointer */
-    cursor: pointer;
+    margin: 8px; /* Adds 8px margin */
+    font-size: 30px; /* Sets font size to 30px */
+    cursor: pointer; /* Changes cursor to pointer */
 }
 
-/* Targets elements with the id "nav-btn" and applies styling */
+/* Targets elements with the id "nav-btn" */
 #nav-btn {
-    /* Sets text alignment to right */
-    text-align: right;
+    text-align: right; /* Sets text alignment to right */
 }
 
-/* Targets i elements on hover and applies styling */
+/* Targets i elements on hover */
 i:hover {
-    /* Changes text color on hover using a custom CSS variable */
-    color: var(--text-color);
+    color: var(--text-color); /* Changes text color on hover using variable, so it will change with theme change */
 }
 
 /*========== WRITE FOR US SECTION ==========*/
 
 /* Style divs with class "textarea-container", which contain counter and textarea */
 .textarea-container {
-    /*set position to relative, allowing absolute positioning of counter*/
-    position: relative;
-    /* Sets the width of the container to the same that textarea */
-    width: fit-content;
+    position: relative; /*set position to relative, allowing absolute positioning of counter*/
+    width: fit-content; /* Sets the width of the container to the same that textarea */
 }
 
-/* Targets elements with the class "textarea" and applies styling */
+/* Targets elements with the class "textarea" */
 .textarea {
-    /* Set the text color using a variable, so it would be changed with theme of page */
+    /* Set the text color using a var(--text-color), so it would be changed with theme of page */
     color: var(--text-color);
-    /* Set the background color using a variable, so it would be changed with theme of page */
+    /* Set the background color using a var(--body-color), so it would be changed with theme of page */
     background: var(--body-color);
-    /* Set the border color and style */
+    /* Set the border color to rgb(118, 118, 118), width to 1px and style to solid*/
     border: rgb(118, 118, 118) solid 1px;
-    /* Add padding around the textarea for aesthetics */
-    padding: 5px;
-    /* Set the minimum height of the textarea, so counter will not go out of textarea bounds*/
+    padding: 5px; /* Add 5px padding around the textarea for aesthetics */
+    /* Set the minimum height of the textarea to 31px, so counter will not go out of textarea bounds*/
     min-height: 31px;
-    /* Set the minimum width of the textarea, so counter will not go out of textarea bounds */
+    /* Set the minimum width of the textarea to 88 px, so counter will not go out of textarea bounds */
     min-width: 88px;
 }
 
-/* Targets "long-desc" and "short-desc" textareas and set their width to 100% */
-#long-desc, #short-desc {
-    width: 100%;
+/* Targets "long-desc" textarea and the input with the id "submit-btn"*/
+#long-desc, input#submit-btn {
+
+    max-width: 750px; /* sets maximum width to 750px */
 }
 
-/* Targets "long-desc" textarea and sets its maximum width */
-#long-desc {
-    max-width: 750px;
-}
-
-/* Targets the "short-desc" textarea and sets its maximum width */
+/* Targets the "short-desc" textarea */
 #short-desc {
-    max-width: 600px;
-}
 
+    max-width: 600px; /* sets maximum width to 600px */
+}
 
 /* positioning and styling for "counter"*/
 .counter {
-    /* Set the position to absolute, to position it in the textarea */
-    position: absolute;
-    /* Set the text color to gray */
-    color: gray;
-    /* Add padding around the counter for aesthetics */
-    padding: 5px;
-    /* Position the element 5 pixels from the bottom edge of its containing block */
-    bottom: 5px;
-    /* Position the element 10 pixels from the right edge of its containing block */
-    right: 10px;
+    position: absolute; /* Set the position to absolute, to position it in the textarea */
+    color: gray; /* Set the text color to gray */
+    padding: 5px; /* Add 5px padding around the counter for aesthetics */
+    bottom: 5px; /* Position the element 5px from the bottom edge of its containing block */
+    right: 10px; /* Position the element 10px from the right edge of its containing block */
 }
 
-/* Set all img's width to 100% of containing block */
-img {
-    width: 100%;
+/*  Styles front and back views of cards, all img elements, elements with the class "footer-wrapper",
+the element with the id "submit-btn", "long-desc" and "short-desc" textareas */
+.card .view, input#submit-btn, .footer-wrapper, #long-desc, #short-desc, img {
+    width: 100%; /* Set width to 100% of containing block */
 }
 
 /* Target element with id "write-for-us-container" and applies grid layout styling */
 #write-for-us-container{
-    /* Set the display property to grid */
-    display: grid;
-    /* Define the grid columns. The first column's width will be based on its content, and the second column will take up the remaining space */
+
+    display: grid; /* Set the display property to grid */
+    /* Define the grid columns. The first column's width will be based on its content,
+    and the second column will take up the remaining space */
     grid-template-columns: min-content auto;
-    /* Set the gap between rows to 3 pixels */
-    row-gap: 3px;
-    /* Set the gap between columns to 8 pixels */
-    column-gap: 8px;
+    row-gap: 3px; /* Set the gap between rows to 3px */
+    column-gap: 8px; /* Set the gap between columns to 8px */
 }
 
-/* Target the inputs in section with id=write-for-us and set its maximum width */
+/* Target the inputs in section with id=write-for-us */
 #write-for-us input {
-    max-width: 270px;
+    max-width: 270px; /*  set maximum width to 270 px */
 }
 
-/* Target the text inputs in section with id=write-for-us and set its minimum width */
+/* Target the text inputs in section with id=write-for-us */
 #write-for-us input[type=text] {
-    min-width: 90px;
+    min-width: 90px; /* set minimum width to 90px */
 }
 
-/* Target input with id=distance and set its maximum width */
+/* Target input with id=distance */
 input#distance {
-    max-width: 90px;
+    max-width: 90px; /* set maximum width to 90px */
 }
 
-/* Targets input and select elements in section with the id="write-for-us" and applies styling */
+/* Targets input and select elements in section with the id="write-for-us" */
 #write-for-us input, #write-for-us select {
-    /* Set the text color using a variable, so it would be changed with theme of page */
+    /* Set the text color using var(--text-color), so it would be changed with theme of page */
     color: var(--text-color);
-    /* Sets the background color using a variable, so it would be changed with theme of page */
+    /* Sets the background color using var(--body-color), so it would be changed with theme of page */
     background: var(--body-color);
-    /* Sets the border color and style */
+}
+
+/* Targets elements with the class "textarea"; input and select elements in section with the id="write-for-us" */
+.textarea, #write-for-us input, #write-for-us select {
+    /* Set the border color to rgb(118, 118, 118), width to 1px and style to solid*/
     border: rgb(118, 118, 118) solid 1px;
 }
 
 /* Targets the element with the id "submit-btn" */
 input#submit-btn {
-    /* Sets the background color to none */
-    background: none;
-    /* Sets the border with a color and style */
+
+    background: none; /* Sets the background color to none */
+    /* Set the border line-color to var(--text-color), line-width to 1px and line-style to solid*/
     border: 1px solid var(--text-color);
-    /* Sets the text color using a variable, so it will change with theme change */
-    color: var(--text-color);
-    /* Changes the cursor to a pointer on hover */
-    cursor: pointer;
-    /* Sets the font size to 16 pixels */
-    font-size: 16px;
-    /* Sets the letter spacing */
-    letter-spacing: 3px;
-    /* Sets the height of the button to 40 pixels */
-    height: 40px;
-    /* Sets the top margin */
-    margin-top: 1rem;
-    /* Sets the width of the button to 60% of its containing block */
-    width: 100%;
-    max-width: 750px;
-    /* Adds a transition effect */
-    transition: 0.4s;
+    color: var(--text-color); /* Sets the text color using var(--text-color), so it will change with theme change */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 16px; /* Sets the font size to 16 pixels */
+    letter-spacing: 3px; /* Sets the letter spacing to 3px */
+    height: 40px; /* Sets the height of the button to 40px */
+    margin-top: 1rem; /* Sets the top margin to 1rem */
 }
 
-/* Styles for images within the more-info section */
-.more-info-images img {
+/*========== MORE INFO PAGE ==========*/
+
+/* Targets images within the more-info section, front and back views of cards,
+img elements within elements with the class "article-section", nav elements */
+.more-info-images img, .card .view, .article-section img, nav {
     height: 100%; /* Set the height of images to 100% */
 }
 
@@ -324,7 +261,7 @@ input#submit-btn {
     display: grid; /* Use grid display */
     grid-template-columns: 1fr 1fr; /* Two columns with equal width */
     grid-template-rows: 1fr 1fr 1fr; /* Three rows with equal height */
-    gap: 10px; /* Gap between grid items */
+    gap: 10px; /* 10px gap between grid items */
 }
 
 /* Styling for the map container */
@@ -336,373 +273,264 @@ input#submit-btn {
 /*========== ALL ROUTES / FAVOURITE ROUTES PAGE ==========*/
 
 /* Targets elements with the class "article-section" and applies grid layout styling */
- .article-section {
-    /* Sets the display property to grid, making the element a grid container */
-    display: grid;
-    /* Defines one column that takes up the entire width of the container */
-    grid-template-columns: 1fr;
+.article-section {
+    display: grid; /* Sets the display property to grid, making the element a grid container */
+
+    grid-template-columns: 1fr; /* Defines one column that takes up the entire width of the container */
     /* Defines three rows, with the first two taking up equal portions of the height and the third row adjusting to content */
     grid-template-rows: 1fr 1fr auto;
-    /* Sets margins on the top and bottom and centers the element horizontally */
+    /* set the top, right and left margins to automatically adjust based on the available space; bottom margin to 20px*/
     margin: auto auto 20px;
-    /* Sets the border color and style */
-    border: var(--dark) solid 2px;
-    /* Adds padding inside the element */
-    padding: 20px;
-    /* Allows content overflow with a scrollbar when necessary */
-    overflow: auto;
+    border: var(--dark) solid 2px; /* Sets the border color to var(--dark) and style to solid, width to 2px */
+    padding: 20px; /* Adds 20px padding inside the element */
+    overflow: auto; /* Allows content overflow with a scrollbar when necessary */
 }
 
-/* Targets img elements within elements with the class "article-section" and applies styling */
+/* Targets img elements within elements with the class "article-section" */
 .article-section img {
-    /* Sets the height of the image to 100% */
-    height: 100%;
-    /* Spans the image across the first and second rows of the grid */
-    grid-row: 1/3;
+
+    grid-row: 1/3; /* Spans the image across the first and second rows of the grid */
 }
 
 /* Targets elements with the class "article-section" on hover and applies a box shadow */
 .article-section:hover {
-    /* Adds a box shadow with a light color, offset, and blur radius */
+    /* Adds a box shadow with var(--light) color, no horizontal offset, 6px vertical offset of the shadow,
+    and 16px blur radius */
     box-shadow: var(--light) 0 6px 16px;
 }
 
-/* Targets h2 elements inside elements with the class "section-heading" and applies styling */
+/* Targets h2 elements inside elements with the class "section-heading" */
 .section-heading h2 {
-    /* Sets margin to 0 */
-    margin: 0;
-    /* Sets font size to 1.5em */
-    font-size: 1.5em;
-    /* Sets letter spacing to 0.05em */
-    letter-spacing: 0.05em;
+    margin: 0; /* Sets margin to 0 */
+    font-size: 1.4em; /* Sets font size to 1.5em */
+    letter-spacing: 0.05em; /* Sets letter spacing to 0.05em */
 }
 
-/* Targets elements with the class "section-heading" and applies styling */
+/* Targets elements with the class "section-heading" */
 .section-heading {
-    /* Sets display property to flex */
-    display: flex;
-    /* Aligns items along the main axis (horizontally) */
-    justify-content: space-between;
-    /* Aligns items along the cross axis (vertically) */
-    align-items: center;
+    display: flex; /* Sets display property to flex */
+    justify-content: space-between; /* Aligns items along the main axis (horizontally) */
+    align-items: center; /* Aligns items along the cross axis (vertically) */
 }
 
-/* Targets elements with the class "section-content" and applies styling */
+/* Targets elements with the class "section-content" */
 .section-content {
-    /* Sets top margin to 0.4rem */
-    margin-top: 0.4rem;
-    /* Sets display property to block */
-    display: block;
+    margin-top: 0.4rem; /* Sets top margin to 0.4rem */
+    display: block; /* Sets display property to block */
 }
 
-/* Targets elements with the class "more-info-btn" and applies styling */
+/* Targets elements with the class "more-info-btn" */
 .more-info-btn {
-    /* Sets bottom margin to 0 */
-    margin-bottom: 0;
-    /* Sets background color to none */
-    background: none;
-    /* Sets border with color and style */
-    border: 1px solid var(--text-color);
-    /* Sets text color using a variable, so it would be changed with theme of page */
-    color: var(--text-color);
-    /* Changes cursor to pointer on hover */
-    cursor: pointer;
-    /* Sets font size */
-    font-size: 16px;
-    /* Sets letter spacing */
-    letter-spacing: 3px;
-    /* Sets height */
-    height: 30px;
-    /* Sets text alignment to center */
-    text-align: center;
-    /* Sets top margin */
-    margin-top: 0.7em;
-    /* Adds transition effect */
-    transition: 0.4s;
-    /* Adds padding on the left and right sides */
+    margin-bottom: 0; /* Sets bottom margin to 0 */
+    background: none; /* Sets background color to none */
+    border: 1px solid var(--text-color); /* Sets border with var(--text-color) color, solid style and 1px width */
+    color: var(--text-color); /* Sets text color using var(--text-color), so it would be changed with theme of page */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 16px; /* Sets font size to 16px */
+    letter-spacing: 3px; /* Sets letter spacing to 3px */
+    height: 30px; /* Sets height to 30px */
+    margin-top: 0.7em; /* Sets top margin to 0.7em */
+    /* Adds 0.5em padding on the left and right sides */
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
 
-/* Targets elements with the class "more-info-btn" and elements with the id "all-routes-btn" on hover*/
+/* Targets elements with the class "more-info-btn", elements with id "all-routes-btn" and "submit-btn" on hover*/
 .more-info-btn:hover, #all-routes-btn:hover, #submit-btn:hover {
-    /* Scales the button down to 95% on hover */
-    transform: scale(0.95);
+    transform: scale(0.95); /* Scales the button down to 95% on hover */
 }
 
 /* styling text, that will be displayed in Favourite routes, if user haven't liked anything*/
 #nothing-is-here {
-    margin: 5%;
-    font-size: 20px;
+    margin: 5%; /* set margin to 5% of containing block */
+    font-size: 20px; /* set font size to 20px */
 }
 
 /* Targets elements with the class "like-btn" */
 .like-btn {
-    /* Removes borders */
-    border: none;
-    /* Sets the background color to transparent */
-    background-color: transparent;
-    /* Changes the cursor to a pointer on hover */
-    cursor: pointer;
-    /* Removes padding */
-    padding: 0;
+    border: none; /* Removes borders */
+    background-color: transparent; /* Sets the background color to transparent */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    padding: 0; /* Removes padding */
 }
 
-/* Targets svg elements inside elements with the class "like-btn" and applies styling */
+/* Targets svg elements inside elements with the class "like-btn" */
 .like-btn svg {
-    /* Sets the height and width of the svg */
-    height: 2rem;
-    width: 2rem;
-    /* Sets the stroke color using variable, so it will change with theme change */
-    stroke: var(--light);
-    /* Sets the width of the stroke */
-    stroke-width: 2px;
+    height: 2rem; /* Sets the height of the svg to 2 rem */
+    width: 2rem; /* Sets the width of the svg to 2 rem */
+    stroke: var(--light); /* Sets the stroke color using var(--light), so it will change with theme change */
+    stroke-width: 2px; /* Sets the width of the stroke to 2px */
 }
 
 /* Targets svg elements inside elements with the class "like-btn" on hover and changes the stroke color */
 .like-btn svg:hover {
-    /* Changes the stroke color on hover using a variable, so it will change with theme change */
-    stroke: var(--dark);
+    stroke: var(--dark); /* Changes the stroke color on hover using var(--dark), so it will change with theme change */
 }
 
 /* Targets svg elements inside elements with the class "liked" on hover and changes the stroke color */
 .liked svg:hover {
-    /* Changes the stroke color on hover using a variable, so it will change with theme change */
+    /* Changes the stroke color on hover using var(--text-color), so it will change with theme change */
     stroke: var(--text-color);
 }
 
-/* Targets svg elements inside elements with the class "liked" and applies styling */
+/* Targets svg elements inside elements with the class "liked" */
 .liked svg {
-    /* Sets the stroke color using a variable, so it will change with theme change */
-    stroke: var(--text-color);
-    /* Sets the fill color using a variable, so it will change with theme change */
-    fill: var(--text-color);
+    stroke: var(--text-color); /* Sets the stroke color using a variable, so it will change with theme change */
+    fill: var(--text-color); /* Sets the fill color using a variable, so it will change with theme change */
 }
 
 /*========== MAIN PAGE ==========*/
 
 /* Targets the element with the id "above-the-fold" */
 #above-the-fold {
-    /* Set the display property to grid */
-    display: grid;
-    /* Define two equal columns */
-    grid-template-columns: 1fr 1fr;
-    /* Define two equal rows */
-    grid-template-rows: 1fr 1fr;
-    /* Set the gap between grid */
-    gap: 0.5em;
+    display: grid; /* Set the display property to grid */
+    grid-template-columns: 1fr 1fr; /* Define two equal columns */
+    grid-template-rows: 1fr 1fr; /* Define two equal rows */
+    gap: 0.5em; /* Set the gap between grid to 0.5em */
 }
 
-/* Targets span elements inside elements with the id "above-the-fold" and applies styling */
+/* Targets span elements inside elements with the id "above-the-fold" */
 #above-the-fold span {
-    /* Aligns content vertically to the center */
-    align-content: center;
-    /* Aligns items along the cross axis (vertically) */
-    align-self: center;
-    /* Aligns text the span to the center */
-    text-align: center;
-    /* Places the span in the second column of the grid */
-    grid-column: 2;
+    align-self: center; /* Aligns content vertically to the center */
+    grid-column: 2; /* Places the span in the second column of the grid */
 }
 
 /* Targets the elements with the id "img1-top" and "img1-bottom"*/
 #img1-top, #img1-bottom {
-    /* Places the image in the first column of the grid */
-    grid-column: 1;
+    grid-column: 1; /* Places the image in the first column of the grid */
 }
 
-/* Targets the element with the id "img2" and applies styling */
+/* Targets the element with the id "img2" */
 #img2 {
-    /* Places the image in the second column of the grid */
-    grid-column: 2;
+    grid-column: 2; /* Places the image in the second column of the grid */
 }
 
 /* Hide elements with the id "img3-top", "img3-bottom", "img4-top", and "img4-bottom" */
 #img3-top, #img3-bottom, #img4-top, #img4-bottom {
-    /* Hides the elements from display */
-    display: none;
+    display: none; /* Hides the elements from display */
 }
 
 /* Targets the element with the id "all-routes-btn" */
 #all-routes-btn {
-    /* Sets the background color to none */
-    background: none;
-    /* Sets the border with a color and style */
-    border: 1px solid var(--text-color);
-    /* Sets the text color using a variable, so it will change with theme change */
-    color: var(--text-color);
-    /* Changes the cursor to a pointer on hover */
-    cursor: pointer;
-    /* Sets the font size to 16 pixels */
-    font-size: 16px;
-    /* Sets the letter spacing */
-    letter-spacing: 3px;
-    /* Sets the height of the button to 40 pixels */
-    height: 40px;
-    /* Sets the top margin */
-    margin-top: 1rem;
-    /* Sets the bottom margin */
-    margin-bottom: 1rem;
-    /* Aligns text within the button to the center */
-    width: 60%;
-    /* Adds a transition effect */
-    transition: 0.4s;
+    background: none; /* Sets the background color to none */
+    border: 1px solid var(--text-color); /* Sets the border with var(--text-color) color and solid style and 1px width */
+    color: var(--text-color); /* Sets the text color using var(--text-color), so it will change with theme change */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 16px; /* Sets the font size to 16 pixels */
+    letter-spacing: 3px; /* Sets the letter spacing to 3px */
+    height: 40px; /* Sets the height of the button to 40 pixels */
+    margin-top: 1rem; /* Sets top margin to 1rem */
+    margin-bottom: 1rem; /* Sets bottom margin to 1rem */
+    width: 60%; /* set button width to 60% of containing block */
 }
 
-/* Target section with id="second-box" and applies grid layout styling */
+/* Target section with id="second-box" */
 #second-box {
-    /* Align the items vertically to the center */
-    align-items: center;
-    /* Set the display property to grid, making the element a grid container */
-    display: grid;
-    /* Set the gap between grid items */
-    gap: 20px;
+    align-items: center; /* Align the items vertically to the center */
+    display: grid; /* Set the display property to grid, making the element a grid container */
+    gap: 20px; /* Set the gap between grid items to 20px */
 }
 
 /*========== WEATHER SECTION ==========*/
 
 /*style for h2 "Current weather in * "*/
 #location {
-    /*space between gallery and weather section*/
-    margin-top: 20px;
+    margin-top: 20px; /*20px space between gallery and weather section*/
 }
 
 /* Style for weather-info div */
 #weather-info {
-    /* Set flexible layout of #weather-info's children */
-    display: flex;
-    /* Aligns the children vertically to the center */
-    align-items: center;
-    /* Aligns the children horizontally to the center */
-    justify-content: center;
+    display: flex; /* Set flexible layout of #weather-info's children */
+    align-items: center; /* Aligns the children vertically to the center */
+    justify-content: center; /* Aligns the children horizontally to the center */
 }
 
 /*weather icon style*/
 #icon {
-    /*width to 15% of containing block*/
-    width: 15%;
-    /*minimum width is 50 pixels */
-    min-width: 50px;
-    /* maximum width is 100 pixels */
-    max-width: 100px;
+    width: 15%; /* width to 15% of containing block*/
+    min-width: 50px; /* set minimum icon width to 50 pixels */
+    max-width: 100px; /* set maximum icon width to 100 pixels */
 }
 
 /* Style for temperature h2 */
 #temperature {
-    /* removing default h2 margin */
-    margin: 0;
+    margin: 0; /* removing default h2 margin */
     /* Set the font weight of the text to lighter than normal, so it wouldn't visually compete with #location h2*/
     font-weight: lighter;
 }
 
 /*========== FOOTER ==========*/
 
-/* Targets footer elements and applies styling */
+/* Targets footer elements */
 footer {
-    /* Set the top margin */
-    margin-top: 4em;
-    /* Set the padding on the top */
-    padding-top: 1rem;
-    /* Set the top border */
+    margin-top: 4em; /* Set the top margin to 4em */
+    padding-top: 1rem; /* Set the padding on the top to 1rem */
+    /* Set the top border ith var(--light) color and solid style and 1px width*/
     border-top: var(--light) 1px solid;
-}
-
-/* Targets elements with the class "footer-wrapper" and sets their width */
-.footer-wrapper {
-    width: 100%;
 }
 
 /* Targets div elements inside elements with the class "link-columns" */
 .link-columns>div {
-    /* Allows flex items to grow to fill available space */
-    flex-grow: 1;
-    /* Sets the display property to flex */
-    display: flex;
-    /* Sets the gap between flex items */
-    gap: 2rem;
+    display: flex; /* Sets the display property to flex */
+    gap: 2rem;/* Sets the gap between flex items to 2em*/
 }
 
 /* Targets ul elements inside elements with the class "link-columns" */
 .link-columns ul {
-    /* Removes default list styling */
-    list-style-type: none;
-    /* Removes padding */
-    padding: 0;
-    /* Removes margin */
-    margin: 0;
-    /* Sets the font weight */
-    font-weight: 600;
+    list-style-type: none; /* Removes default list styling */
+    font-weight: 600; /* Sets the font weight to 600*/
 }
 
 /* Targets anchor elements inside ul elements inside elements with the class "link-columns"*/
 .link-columns ul a {
-    /* Sets the text color using a variable, so it will change with theme change */
-    color: var(--light);
-    /* Removes underline from links */
-    text-decoration: none;
-    /* Adds transition effect for color changes */
-    transition: all 0.2s ease-in-out;
+    color: var(--light); /* Sets the text color using var(--light), so it will change with theme change */
+    text-decoration: none; /* Removes underline from links */
+    transition: 0.2s; /* Adds 0.2s transition effect for color changes on hover */
 }
 
 /* Targets li elements inside ul elements inside elements with the class "link-columns" */
 .link-columns ul li {
-    /* Adds padding below list items */
-    padding-bottom: 1rem;
+    padding-bottom: 1rem; /* Adds 1rem padding below list items */
 }
 
-/* Targets anchor elements inside ul elements inside elements with the class "link-columns" on hover */
-.link-columns ul a:hover {
-    /* Changes text color on hover using a variable, so it will change with theme change */
-    color: var(--dark);
+/* Targets elements with the class "footer-bottom", h3 elements inside elements with the class "link-columns",
+ anchor elements inside ul elements inside elements with the class "link-columns" on hover*/
+.footer-bottom, .link-columns h3, .link-columns ul a:hover {
+    color: var(--dark); /* Changes text color on hover using var(--dark), so it will change with theme change */
 }
 
 /* Targets h3 elements inside elements with the class "link-columns" */
 .link-columns h3 {
-    /* Sets the text color using a variable, so it will change with theme change */
-    color: var(--dark);
-    /* Sets bottom margin */
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Sets bottom margin to 1.5rem */
 }
 
 /* Targets elements with the class "footer-bottom" */
 .footer-bottom {
-    /* Sets top margin */
-    margin-top: 4rem;
-    /* Sets text color using a variable, so it will change with theme change */
-    color: var(--dark);
+    margin-top: 4rem; /* Sets top margin to 4rem */
 }
 
 /* Targets elements with the class "footer-bottom-wrapper" */
 .footer-bottom-wrapper {
-    /* Sets padding */
-    padding: 0 1rem 2.5rem;
-    /* Sets text alignment */
-    text-align: center;
+    padding: 0 1rem 2.5rem; /* Sets padding */
 }
 
 /* Targets elements with the class "link-columns" */
 .link-columns {
-    /* Sets width */
-    width: 80%;
+    width: 80%; /* Sets width to 80% of its containing block*/
     /* Centers horizontally */
     margin-left: auto;
     margin-right: auto;
-    /* Sets display property to grid */
-    display: grid;
-    /* Defines two equal columns */
-    grid-template-columns: 1fr 1fr;
-    /* Defines two equal rows */
-    grid-template-rows: 1fr 1fr;
-    /* Sets gap between grid items */
-    gap: 1em;
+    display: grid;/* Sets display property to grid */
+    grid-template-columns: 1fr 1fr; /* Defines two equal columns */
+    grid-template-rows: 1fr 1fr; /* Defines two equal rows */
+    gap: 1em; /* Sets gap between grid items to 1em */
 }
 
 /*========== SOURCES PAGE ==========*/
 
 /* Targets anchor elements inside elements with the id "sources" */
 #sources a {
-    /* Sets the text color using a variable, so it will change with theme change */
-    color: var(--text-color);
+    color: var(--text-color); /* Sets the text color using var(--text-color), so it will change with theme change */
 }
 
 /*========== MEMORY CARD GAME ==========*/
@@ -716,7 +544,7 @@ footer {
 
 /* Styles for the wrapper element */
 .wrapper {
-    padding: 25px; /* Add padding around the wrapper */
+    padding: 25px; /* Add 25px padding around the wrapper */
 }
 
 /* Styles for the cards container and card elements */
@@ -728,8 +556,8 @@ footer {
 
 /* Styles for the cards container */
 #cards {
-    height: 300px; /* Set height of the cards container */
-    width: 300px; /* Set width of the cards container */
+    height: 300px; /* Set 300px height of the cards container */
+    width: 300px; /* Set 300px width of the cards container */
     flex-wrap: wrap; /* Allow cards to wrap to the next line */
     justify-content: space-between; /* Distribute space between cards */
 }
@@ -740,7 +568,7 @@ footer {
     list-style: none; /* Remove bullet points */
     user-select: none; /* Disable selection of card content */
     position: relative; /* Set position to relative */
-    perspective: 1000px; /* Set perspective for 3D effect */
+    perspective: 1000px; /* Set perspective to 1000px for 3D effect */
     transform-style: preserve-3d; /* Preserve 3D transformations */
     height: calc(100% / 4 - 10px); /* Calculate height of each card */
     width: calc(100% / 4 - 10px); /* Calculate width of each card */
@@ -748,7 +576,7 @@ footer {
 
 /* Animation for shaking effect */
 .card.shake {
-    animation: shake 0.35s ease-in-out; /* Apply shake animation */
+    animation: shake 0.35s ease-in-out; /* Apply 0.35 ease-in-out shake animation */
 }
 
 /* Keyframes for shake animation */
@@ -757,45 +585,43 @@ footer {
         transform: translateX(0); /* Initial and final positions */
     }
     20% {
-        transform: translateX(-13px); /* 20% position */
+        transform: translateX(-13px); /* set 20% position to -13px */
     }
     40% {
-        transform: translateX(13px); /* 40% position */
+        transform: translateX(13px); /* set 40% position 13px */
     }
     60% {
-        transform: translateX(-8px); /* 60% position */
+        transform: translateX(-8px); /* set 60% position -8px */
     }
     80% {
-        transform: translateX(8px); /* 80% position */
+        transform: translateX(8px); /* set 80% position to 8px */
     }
 }
 
 /* Styles for the front and back views of cards */
 .card .view {
-    width: 100%; /* Set width of the view */
-    height: 100%; /* Set height of the view */
     position: absolute; /* Set position to absolute */
-    border-radius: 7px; /* Add border radius */
+    border-radius: 7px; /* Add 7px border radius */
     pointer-events: none; /* Disable pointer events */
     backface-visibility: hidden; /* Hide backface of the view */
-    transition: transform 0.25s linear; /* Apply transition effect */
+    transition: transform 0.25s linear; /* Apply 0.25s linear transition effect */
 }
 
 /* Styles for the front view */
 .card .front-view {
-    background: #beb8b1; /* Set background color */
+    background: #beb8b1; /* Set background color to #beb8b1*/
 }
 
 /* Styles for the back view */
 .card .back-view {
-    background: #fcfbf9; /* Set background color */
+    background: #fcfbf9; /* Set background color to #fcfbf9 */
 }
 
 /* Styles for images inside card views */
 .card .front-view img,
 .card .back-view img {
-    width: 85%; /* Set width of the image */
-    height: 85%; /* Set height of the image */
+    width: 85%; /* Set width of the image to 85% of its containing block*/
+    height: 85%; /* Set height of the image to 85% of its containing block */
 }
 
 /* Initial rotation for back view */
@@ -824,6 +650,7 @@ footer {
         height: calc(100% / 8 - 5px); /* Adjust height of each card */
         width: calc(100% / 2 - 5px); /* Adjust width of each card */
     }
+
     #cards {
         height: 480px; /* Adjust height of the cards container */
         width: 120px; /* Adjust width of the cards container */
@@ -833,52 +660,48 @@ footer {
     #above-the-fold img {
         display: none;
     }
+
     /* Changes the display property of elements with the id "above-the-fold" to block */
     #above-the-fold {
         display: block;
     }
 
-    /* Targets the element with the id "all-routes-btn" and applies styling */
+    /* Targets the element with the id "all-routes-btn" */
     #all-routes-btn {
-        /* Sets width to 100% */
-        width: 100%;
-        /* Sets height to 30px */
-        height: 30px;
-        /* Sets letter spacing to 0 */
-        letter-spacing: 0;
-    }
-    /* Targets h1, h2, and .more-info h1 elements and applies styling */
-    .more-info h1, h1, h2 {
-        /* Sets font size to 22px */
-        font-size: 22px;
-        /* Sets letter spacing to 0 */
-        letter-spacing: 0;
-    }
-    /* Targets elements with the class "more-info-images" and applies styling */
-    .more-info-images {
-        /* Sets grid template columns and rows */
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100%; /* Sets width to 100% */
+        height: 30px; /* Sets height to 30px */
+        letter-spacing: 0;/* Sets letter spacing to 0 */
     }
 
-    /* Targets elements with the class "link-columns" and applies styling */
-    .link-columns {
-        /* Sets width to 90% */
-        width: 90%;
-        /* Sets grid template columns and rows */
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        /* Removes gap between grid items */
-        /*gap: 0;*/
+    /* Targets h1, h2, and .more-info h1 elements */
+    .more-info h1, h1, h2 {
+        font-size: 22px; /* Sets font size to 22px */
+        letter-spacing: 0;/* Sets letter spacing to 0 */
     }
+
+    /* Targets elements with the class "more-info-images" */
+    .more-info-images {
+        /* Sets grid template columns and rows */
+        grid-template-columns: 1fr; /* one column */
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /* six equal rows */
+    }
+
+    /* Targets elements with the class "link-columns" */
+    .link-columns {
+
+        width: 90%; /* Sets width to 90% of its containing block */
+        /* Sets grid template columns and rows */
+        grid-template-columns: 1fr; /* one column */
+        grid-template-rows: 1fr 1fr 1fr; /* three equal rows */
+    }
+
     /* Targets elements with the class "more-info-btn" and applies padding */
     .more-info-btn {
-        /* Sets padding on the left and right sides */
+        /* Sets padding on the left and right sides to 0.2em */
         padding-left: 0.2em;
         padding-right: 0.2em;
     }
 }
-
 
 /*small mobile*/
 /* Media query for screens with a minimum width of 245px and maximum width of 320px */
@@ -889,40 +712,20 @@ footer {
         width: calc(100% / 4 - 5px); /* Adjust width of each card */
     }
     #cards {
-        height: 225px; /* Adjust height of the cards container */
-        width: 225px; /* Adjust width of the cards container */
+        height: 225px; /* set height of the cards container to 225px */
+        width: 225px; /* set width of the cards container to 225px*/
     }
 
-    /* Targets the element with the id "all-routes-btn" and applies styling */
+    /* Targets the element with the id "all-routes-btn" */
     #all-routes-btn {
-        /* Sets width to 75% */
-        width: 75%;
-        /* Sets height to 30px */
-        height: 30px;
+        width: 75%; /* Sets width to 75% */
+        height: 30px; /* Sets height to 30px */
     }
 
-    /* Targets h1 and .more-info h1 elements and applies styling */
+    /* Targets h1 and .more-info h1 elements */
     .more-info h1, h1 {
-        /* Sets font size to 30px */
-        font-size: 30px;
-        /* Sets letter spacing to 0 */
-        letter-spacing: 0;
-    }
-    /* Targets elements with the class "more-info-images" and applies styling */
-    .more-info-images {
-        /* Sets grid template columns and rows */
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    /* Targets elements with the class "link-columns" and applies styling */
-    .link-columns {
-        /* Sets width to 90% */
-        width: 90%;
-        /* Sets grid template columns and rows */
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        /* Removes gap between grid items */
-        /*gap: 0;*/
+        font-size: 30px; /* Sets font size to 30px */
+        letter-spacing: 0; /* Sets letter spacing to 0 */
     }
 
     /* Targets elements with the class "more-info-btn" and applies padding */
@@ -936,16 +739,9 @@ footer {
         display: none;
     }
 
-    /* Targets span elements inside the element with the id "above-the-fold" and applies styling */
+    /* Targets span elements inside the element with the id "above-the-fold" */
     #above-the-fold span {
-        /* Aligns content along the cross axis (vertically) to the center */
-        align-content: center;
-        /* Aligns text within the span to the center */
-        text-align: center;
-        /* Places the span in the second column of the grid */
-        grid-column: 2;
-        /* Spans the span across the first and second rows of the grid */
-        grid-row: 1/3;
+        grid-row: 1/3; /* Spans the span across the first and second rows of the grid */
     }
 
 }
@@ -955,8 +751,8 @@ footer {
 @media screen and (min-width: 480px) {
 
     #cards {
-        height: 400px; /* Adjust height of the cards container */
-        width: 400px; /* Adjust width of the cards container */
+        height: 400px; /* set height of the cards container to 400px */
+        width: 400px; /* set width of the cards container to 400px */
     }
 
     /* Hides elements with the id "open-nav" and elements with the class "close-nav-btn" */
@@ -964,136 +760,102 @@ footer {
         display: none;
     }
 
-    /* Targets nav elements and applies styling */
+    /* Targets nav elements */
     nav {
-        /* Sets display property to flex */
-        display: flex;
-        /* Sets position to relative */
-        position: relative;
-        /* Removes padding */
-        padding: 0;
-        /* Aligns items along the main axis (horizontally) */
-        justify-content: right;
-        /* Sets background color to none */
-        background: none;
+        display: flex; /* Sets display property to flex */
+        position: relative; /* Sets position to relative */
+        padding: 0; /* Removes padding */
+        justify-content: right;/* Aligns items horizontally */
+        background: none; /* Sets background color to none */
     }
 
-    /* Targets anchor elements inside nav elements and applies styling */
+    /* Targets anchor elements inside nav elements */
     nav a {
-        /* Sets padding on top, right, and bottom sides */
+        /* Sets padding on top and bottom to 0.3rem, right and left to 3.5% of its containing block */
         padding: 0.3em 3.5% 0.3em;
-        /* Sets font size to 20px */
-        font-size: 20px;
-        /* Sets letter spacing to 2px */
-        letter-spacing: 2px;
+        font-size: 20px; /* Sets font size to 20px */
+        letter-spacing: 2px;/* Sets letter spacing to 2px */
     }
 
-    /* Targets elements with the id "active" and applies styling */
+    /* Targets elements with the id "active" */
     #active {
-        /* Sets font weight to bold */
-        font-weight: bold;
-        /* Sets text color using a custom CSS variable */
-        color: var(--text-color);
-        /* Adds underline to text */
-        text-decoration: underline;
-        /* Sets offset for underline */
-        text-underline-offset: 5px;
+        font-weight: bold; /* Sets font weight to bold */
+        color: var(--text-color);/* Sets text color using var(--text-color), so it will change with theme change */
+        text-decoration: underline; /* Adds underline to text */
+        text-underline-offset: 5px; /* Sets offset for underline to 5px */
     }
 
-    /* Targets i elements and applies styling */
+    /* Targets i elements */
     i {
-        /* Sets font size to 30px */
-        font-size: 30px;
+        font-size: 30px; /* Sets font size to 30px */
         /* Aligns the element to the vertical center */
         margin-top: auto;
         margin-bottom: auto;
-        /* Removes padding on the left side */
-        padding-left: 0;
+        padding-left: 0; /* Removes padding on the left side */
     }
 
-    /* Targets elements with the id "img3-top" and "img3-bottom" and applies styling */
+    /* Targets elements with the id "img3-top" and "img3-bottom" */
     #img3-top, #img3-bottom {
-        /* Sets display property to grid */
-        display: grid;
-        /* Sets width to 100% */
-        width: 100%;
-        /* Places the elements in the third column of the grid */
-        grid-column: 3;
+        display: grid; /* Sets display property to grid */
     }
 
-    /* Targets elements with the id "above-the-fold" and applies styling */
+    /* Targets elements with the id "above-the-fold" */
     #above-the-fold{
-        /* Sets grid template columns to three equal columns */
-        grid-template-columns: 1fr 1fr 1fr;
-        /* Sets gap between grid items */
-        gap: 0.5em
+        grid-template-columns: 1fr 1fr 1fr; /* Sets grid template columns to three equal columns */
+        gap: 0.5em /* Sets gap between grid items to 0.5em */
     }
 
-    /* Targets elements with the id "nothing-is-here" and applies styling */
+    /* Targets elements with the id "nothing-is-here"*/
     #nothing-is-here {
-        /* Sets font size to 25px */
-        font-size: 25px;
+        font-size: 25px; /* Sets font size to 25px */
     }
 
-    /* Targets the element with the id "all-routes-btn" and applies styling */
+    /* Targets the element with the id "all-routes-btn" */
     #all-routes-btn {
-        /* Sets width to 45% */
-        width: 45%;
+        width: 45%; /* Sets width to 45% of its containing block */
     }
 
-    /* Targets main elements and applies styling */
+    /* Targets main elements */
     main {
-        /* Sets maximum width to 95% */
-        max-width: 95%;
-        /* Centers horizontally */
-        margin: auto;
+        max-width: 95%; /* Sets maximum width to 95% of its containing block */
+        margin: auto; /* Centers horizontally */
     }
 
-    /* Targets h1 and .more-info h1 elements and applies styling */
+    /* Targets h1 and .more-info h1 elements */
     .more-info h1, h1 {
-        /* Sets font size to 45px */
-        font-size: 45px;
-        /* Sets bottom margin to 0.4em */
-        margin-bottom: 0.4em;
-        /* Sets letter spacing to 0.5rem */
-        letter-spacing: 0.5rem;
+        font-size: 45px; /* Sets font size to 45px */
+        margin-bottom: 0.4em; /* Sets bottom margin to 0.4em */
+        letter-spacing: 0.5rem; /* Sets letter spacing to 0.5rem */
     }
 
-    /* Targets elements with the class "more-info-images" and applies styling */
+    /* Targets elements with the class "more-info-images" */
     .more-info-images {
         /* Sets grid template columns and rows */
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; /* three equal columns*/
+        grid-template-rows: 1fr 1fr; /* two equal rows*/
     }
 
-    /* Targets h2 elements and applies styling */
+    /* Targets h2 elements */
     h2 {
-        /* Sets font size to 35px */
-        font-size: 35px;
-        /* Sets letter spacing to 0.1rem */
-        letter-spacing: 0.1rem;
+        font-size: 35px; /* Sets font size to 35px */
+        letter-spacing: 0.1rem; /* Sets letter spacing to 0.1rem */
     }
 
-    /* Targets elements with the class "link-columns" and applies styling */
+    /* Targets elements with the class "link-columns" */
     .link-columns {
-        /* Sets width to 80% */
-        width: 80%;
+        width: 80%; /* Sets width to 80% of its containing block */
         /* Centers horizontally */
         margin-left: auto;
         margin-right: auto;
-        /* Sets display property to grid */
-        display: grid;
-        /* Defines three equal columns */
-        grid-template-columns: 1fr 1fr 1fr;
-        /* Defines one row */
-        grid-template-rows: 1fr;
-        /* Sets gap between grid items */
-        gap: 2rem;
+        display: grid; /* Sets display property to grid */
+        grid-template-columns: 1fr 1fr 1fr; /* Defines three equal columns */
+        grid-template-rows: 1fr; /* Defines one row */
+        gap: 2rem; /* Sets 2rem gap between grid items */
     }
 
     /* Targets elements with the class "more-info-btn" and applies padding */
     .more-info-btn {
-        /* Sets padding on the left and right sides */
+        /* Sets padding on the left and right sides to 1em */
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -1105,139 +867,109 @@ footer {
 
     /* Styling for the map container */
     #map {
-        height: 500px;
+        height: 500px; /* sets height to 500px */
     }
 
     #cards {
-        height: 450px; /* Adjust height of the cards container */
-        width: 450px; /* Adjust width of the cards container */
+        height: 450px; /* sets height of the cards container to 450px */
+        width: 450px; /* sets width of the cards container to 450px */
     }
 
-    /* Targets elements with the id "img4-top" and "img4-bottom" and applies styling */
+    /* Targets elements with the id "img4-top" and "img4-bottom" */
     #img4-top, #img4-bottom {
-        /* Sets display property to grid */
-        display: grid;
-        /* Sets width to 100% */
-        width:100%;
-        /* Places the elements in the fourth column of the grid */
-        grid-column: 4;
+        display: grid; /* Sets display property to grid */
+        grid-column: 4; /* Places the elements in the fourth column of the grid */
     }
 
-    /* Targets elements with the id "above-the-fold" and applies styling */
+    /* Targets elements with the id "above-the-fold" */
     #above-the-fold{
-        /* Sets grid template columns to four equal columns */
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        /* Sets gap between grid items */
-        gap: 0.7em;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Sets grid template columns to four equal columns */
+        gap: 0.7em; /* Sets 0.7em gap between grid items */
     }
 
-    /* Targets images inside elements with the id "above-the-fold" and applies styling */
-    #above-the-fold img {
-        /* Adds transition effect for scaling */
-        transition: 0.4s;
-    }
-
-    /* Targets images inside elements with the id "above-the-fold" on hover and applies styling */
+    /* Targets images inside elements with the id "above-the-fold" on hover */
     #above-the-fold img:hover {
-        /* Scales the image by 1.1 on hover */
-        transform: scale(1.1);
+        transform: scale(1.1); /* Scales the image by 1.1 on hover */
     }
 
-    /* Targets anchor elements inside nav elements and applies styling */
+    /* Targets anchor elements inside nav elements */
     nav a {
-        /* Sets letter spacing to 3px */
-        letter-spacing: 3px;
-        /* Sets padding on top, right, and bottom sides */
+        letter-spacing: 3px;/* Sets letter spacing to 3px */
+        /* Sets padding on top and bottom to 0.5em, right and left to 3% of its containing block */
         padding: 0.5em 3% 0.5em;
-        /* Sets font size to 22px */
-        font-size: 22px;
-    }
-    /* Targets i elements and applies styling */
-    i {
-        /* Sets font size to 40px */
-        font-size: 40px;
+        font-size: 22px; /* Sets font size to 22px */
     }
 
-    /* Targets elements with the id "nothing-is-here" and applies styling */
+    /* Targets i elements */
+    i {
+        font-size: 40px; /* Sets font size to 40px */
+    }
+
+    /* Targets elements with the id "nothing-is-here" */
     #nothing-is-here {
-        /* Sets font size to 30px */
-        font-size: 30px;
+        font-size: 30px; /* Sets font size to 30px */
     }
-    /* Targets elements with the class "more-info-btn" and applies styling */
+
+    /* Targets elements with the class "more-info-btn" */
     .more-info-btn {
-        /* Sets left margin to 20px */
-        margin-left: 20px;
+        margin-left: 20px; /* Sets left margin to 20px */
     }
+
     /* Targets the element with the id "all-routes-btn" and applies margin */
     #all-routes-btn {
-        /* Sets top margin to 2rem */
-        margin-top: 2rem;
+        margin-top: 2rem; /* Sets top margin to 2rem */
     }
+
     /* Targets the element with the id "all-routes-btn" and applies width */
     #all-routes-btn {
-        /* Sets width to 40% */
-        width: 40%;
+        width: 40%; /* Sets width to 40% of its containing block */
     }
-    /* Targets h1 elements and applies styling */
+
+    /* Targets h1 elements */
     h1 {
-        /* Sets font size to 60px */
-        font-size: 60px;
-        /* Sets letter spacing to 1rem */
-        letter-spacing: 1rem;
+        font-size: 60px; /* Sets font size to 60px */
+        letter-spacing: 1rem; /* Sets letter spacing to 1rem */
     }
-    /* Targets section elements and applies styling */
+
+    /* Targets section elements */
     section {
-        /* Sets font size to 18px */
-        font-size: 18px;
+        font-size: 18px; /* Sets font size to 18px */
     }
-    /* Targets the element with the id "second-box" and applies styling */
+
+    /* Targets the element with the id "second-box" */
     #second-box {
-        /* Sets grid template columns to two equal columns */
-        grid-template-columns: 1fr 1fr;
-        /* Sets grid template rows to one row */
-        grid-template-rows: 1fr;
-        /* Sets top margin to 3% */
-        margin-top: 3%;
+        grid-template-columns: 1fr 1fr; /* Sets grid template columns to two equal columns */
+        grid-template-rows: 1fr; /* Sets grid template rows to one row */
+        margin-top: 3%; /* Sets top margin to 3% of its containing block */
     }
-    /* Targets h2 elements and applies styling */
+
+    /* Targets h2 elements */
     h2 {
-        /* Sets font size to 40px */
-        font-size: 40px;
-        /* Sets bottom margin to 0.4em */
-        margin-bottom: 0.4em;
-        /* Sets letter spacing to 0.4rem */
-        letter-spacing: 0.4rem;
+        font-size: 40px; /* Sets font size to 40px */
+        margin-bottom: 0.4em; /* Sets bottom margin to 0.4em */
+        letter-spacing: 0.4rem; /* Sets letter spacing to 0.4rem */
     }
 
-    /* Targets elements with the class "article-section" and applies styling */
+    /* Targets elements with the class "article-section" */
     .article-section {
-
-        /* Sets grid template columns to two equal columns */
-        grid-template-columns: 1fr 1fr;
-        /* Sets grid template rows to one fraction and auto */
-        grid-template-rows: 1fr auto;
-        /* Centers horizontally */
-        margin: auto auto 20px;
-        /* Sets maximum width to 992px */
-        max-width: 992px;
+        grid-template-columns: 1fr 1fr; /* Sets grid template columns to two equal columns */
+        grid-template-rows: 1fr auto; /* Sets grid template rows to one fraction and auto */
+        margin: auto auto 20px;  /* Centers horizontally */
+        max-width: 992px; /* Sets maximum width to 992px */
     }
 
-    /* Targets images inside elements with the class "article-section" and applies styling */
+    /* Targets images inside elements with the class "article-section" */
     .article-section img {
-        /* Adds border on the right side */
+        /* Adds border on the right side with var(--light) color, solid style, and 2px width */
         border-right: var(--light) solid 2px;
-        /* Adds padding on the right side */
-        padding-right: 20px;
-        /* Spans the image across the first and second rows of the grid */
-        grid-row: 1/3;
+        padding-right: 20px;/* Adds 20px padding on the right side */
+        grid-row: 1/3; /* Spans the image across the first and second rows of the grid */
     }
 
-    /* Targets elements with the class "section-content" and applies styling */
+    /* Targets elements with the class "section-content" */
     .section-content {
-        /* Sets top margin to 0 */
-        margin-top: 0;
-        /* Sets left padding to 20px */
-        padding-left: 20px;
+        margin-top: 0; /* Sets top margin to 0 */
+        padding-left: 20px; /* Sets left padding to 20px */
     }
 }
 
@@ -1245,118 +977,101 @@ footer {
 /*tablet: landscape, laptop, desktop*/
 /* Media query for screens with a minimum width of 992px */
 @media screen and (min-width: 992px) {
-    /* Targets the element with the id "above-the-fold" and applies styling */
+
+    /* Targets the element with the id "above-the-fold" */
     #above-the-fold{
-        /* Sets gap between grid items to 1em */
-        gap: 1em;
+        gap: 1em; /* Sets gap between grid items to 1em */
     }
-    /* Targets anchor elements inside nav elements and applies styling */
+
+    /* Targets anchor elements inside nav elements */
     nav a {
-        /* Sets padding on top, right, and bottom sides */
-        padding: 0.5em 5% 0.5em;
+        /* Sets padding on top and bottom to 0.5em, right and left to 5% of its containing block */
+        padding: 0.5em 5% 0.5em;/* Sets padding on top, right, and bottom sides */
     }
-    /* Targets i elements and applies styling */
+
+    /* Targets i elements */
     i {
-        /* Sets font size to 50px */
-        font-size: 50px;
+        font-size: 50px; /* Sets font size to 50px */
     }
-    /* Targets elements with the class "more-info-images" and applies styling */
+
+    /* Targets elements with the class "more-info-images" */
     .more-info-images {
-        /* Sets display property to flex */
-        display: flex;
-        /* Sets flex wrap to wrap */
-        flex-wrap: wrap;
-        /* Sets gap between flex items */
-        gap: 16px;
+        display: flex;/* Sets display property to flex */
+        flex-wrap: wrap; /* Sets flex wrap to wrap */
+        gap: 16px; /* Sets gap between flex items to 16px */
     }
 
-    /* Targets elements with the class "more-info-img" and applies styling */
+    /* Targets elements with the class "more-info-img" */
     .more-info-img {
-        /* Sets position to relative */
-        position: relative;
-        /* Sets width to 5rem */
-        width: 5rem;
-        /* Sets height to 24rem */
-        height: 24rem;
-        /* Sets overflow to hidden */
-        overflow: hidden;
-        /* Adds transition effect */
-        transition: 0.4s ease-in-out;
-        /* Adds box shadow */
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
-        /* Sets flex to 0.25 */
-        flex: 0.25;
+        position: relative; /* Sets position to relative */
+        width: 5rem; /* Sets width to 5rem */
+        height: 24rem; /* Sets height to 24rem */
+        overflow: hidden; /* Sets overflow to hidden */
+        transition: 0.4s ease-in-out; /* Sets a smooth transition effect to 0.4 seconds */
+        /* Adds a box shadow with  rgba(0, 0, 0, 0.5) color, no horizontal offset, 5px vertical offset of the shadow,
+        and 12px blur radius */
+        box-shadow: rgba(0, 0, 0, 0.5) 0 5px 12px;
+        flex: 0.25; /* Sets flex to 0.25 */
     }
 
-    /* Targets images inside elements with the class "more-info-img" and applies styling */
+    /* Targets images inside elements with the class "more-info-img" */
     .more-info-img img {
-        /* Sets height to 24rem */
-        height: 24rem;
-        /* Sets width to auto */
-        width: auto;
+        height: 24rem; /* Sets height to 24rem */
+        width: auto; /* Sets width to auto */
     }
 
-    /* Targets elements with the class "more-info-img" on hover and applies styling */
+    /* Targets elements with the class "more-info-img" on hover */
     .more-info-img:hover {
-        /* Expands flex to 2 */
-        flex: 2;
-        /* Changes cursor to pointer */
-        cursor: pointer;
+        flex: 2; /* Expands flex to 2 */
+        cursor: pointer; /* Changes cursor to pointer */
     }
 
-    /* Targets images inside elements with the class "more-info-img" on hover and applies styling */
+    /* Targets images inside elements with the class "more-info-img" on hover */
     .more-info-img:hover img{
-        /* Expands flex to 2 */
-        flex: 2;
-        /* Sets width to 100% */
-        width: 100%;
+        flex: 2; /* Expands flex to 2 */
+        width: 100%; /* Sets width to 100% */
     }
 
     /* Targets the element with the id "all-routes-btn" and applies margin */
     #all-routes-btn {
-        /* Sets top margin to 3em */
-        margin-top: 3em;
+        margin-top: 3em; /* Sets top margin to 3em */
     }
-    /* Targets h1 elements and applies styling */
+    /* Targets h1 elements */
     h1 {
-        /* Sets font size to 70px */
-        font-size: 70px;
-        /* Sets letter spacing to 1.3rem */
-        letter-spacing: 1.3rem;
+        font-size: 70px; /* Sets font size to 70px */
+        letter-spacing: 1.3rem; /* Sets letter spacing to 1.3rem */
     }
-    /* Targets section elements and applies styling */
+    /* Targets section elements */
     section {
-        /* Sets font size to 20px */
-        font-size: 20px;
+        font-size: 20px; /* Sets font size to 20px */
     }
-    /* Targets input elements inside elements with the id "write-for-us" and applies styling */
+    /* Targets input elements inside elements with the id "write-for-us" */
     #write-for-us input {
-        /* Sets font size to 16px */
-        font-size: 16px;
+        font-size: 16px;/* Sets font size to 16px */
     }
 }
 
 /*large desktop, tv, etc*/
 /* Media query for screens with a minimum width of 1200px */
 @media screen and (min-width: 1200px) {
-    /* Targets section elements and applies styling */
+
+    /* Targets section elements */
     section {
-        /* Sets font size to 22px */
-        font-size: 22px;
+        font-size: 22px; /* Sets font size to 22px */
     }
-    /* Targets body elements and applies styling */
+
+    /* Targets body elements */
     body {
-        /* Sets maximum width to 1340px */
-        max-width: 1340px;
+        max-width: 1340px; /* Sets maximum width to 1340px */
     }
-    /* Targets h1 elements and applies styling */
+
+    /* Targets h1 elements */
     h1 {
-        /* Sets letter spacing to 1.7rem */
-        letter-spacing: 1.7rem;
+        letter-spacing: 1.7rem; /* Sets letter spacing to 1.7rem */
     }
-    /* Targets input elements inside elements with the id "write-for-us" and applies styling */
+
+    /* Targets input elements inside elements with the id "write-for-us" */
     #write-for-us input {
-        /* Sets font size to 18px */
-        font-size: 18px;
+        font-size: 18px; /* Sets font size to 18px */
     }
 }
