@@ -35,7 +35,7 @@
     <!-- Section for writing content for the publication -->
     <section id="write-for-us">
         <!-- Form for submitting content -->
-        <form onsubmit="return submitForm();">
+        <form id="write-for-us-form" action="mailto:example@example.com" method="post" onsubmit="return submitForm();">
             <!-- Container for form elements -->
             <div id="write-for-us-container">
                 <!-- Label and input field for starting point -->
@@ -99,8 +99,10 @@
             <label for="accept"><input type="checkbox" id="accept" required> I accept the Terms of Use & Privacy Policy</label>
             <div>
             <!-- Submit button -->
-            <input id="submit-btn" type="submit">
+                <input id="submit-btn" type="submit">
+                <input id="reset-btn" type="reset">
             </div>
+
         </form>
     </section>
 
