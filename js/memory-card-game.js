@@ -62,13 +62,6 @@ function matchCards(img1, img2) {
         // If all cards are matched, shuffle the cards after 1.3s
         if (matched === 8) {
             setTimeout(() => {
-                cards.forEach(card => {
-                    // make the card visible
-                    card.classList.remove("invisible");
-                });
-            }, 300);
-
-            setTimeout(() => {
                 if (!isNaN(bestScore) && bestScore>0)
                     bestScore =  bestScore > score ? score : bestScore;
                 else
@@ -124,9 +117,11 @@ function matchCards(img1, img2) {
 
 // Function to shuffle the cards
 function shuffleCard() {
-    score = 0;
-    scoreElement.innerHTML = "Score: " + score;
     // Reset variables and initialize an array with card pairs
+    // set score to 0
+    score = 0;
+    // update score on page
+    scoreElement.textContent = "Score: " + score;
     // set matched to 0
     matched = 0;
     // Enable the deck
@@ -136,16 +131,22 @@ function shuffleCard() {
     // array that represents pairs of matching cards
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 
-    // Shuffle the array randomly
-    // generate a random number between 0 and 1, check if it is greater than 0.5
-    // if yes, switch the order of the two elements that are being compared
-    // else the order of the two elements that are being compared should stay the same
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+    // Shuffle the array using Fisher-Yates (Knuth) Shuffle algorithm
+    //initialize a loop that starts from the last element of the arr array and iterate backwards
+    for (let i = arr.length - 1; i > 0; i--) {
+        // generate a random index j between 0 and the current index i.
+        let j = Math.floor(Math.random() * (i + 1));
+        // swap elements at indices i and j in the arr array
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
 
     // Iterate over each card and reset its state
     cards.forEach((card, i) => {
         // flip the card back
         card.classList.remove("flip");
+        // make the card visible
+        card.classList.remove("invisible");
+
         // variable that allows to directly manipulate the image source of each card
         let imgTag = card.querySelector(".back-view img");
         // set the src attribute of the image based on the shuffled array arr
