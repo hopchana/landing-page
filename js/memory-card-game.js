@@ -9,9 +9,22 @@ let cardOne, cardTwo;
 // variable to control the interactivity of the card deck in the game.
 // initially set to false, it indicates that the deck is enabled and players can interact with the cards
 let disableDeck = false;
+let score = 0
+let bestScore = parseInt(sessionStorage.getItem("best-score"));
+
+let scoreElement = document.getElementById("score");
+let bestScoreElement = document.getElementById("best-score");
+if (!isNaN(bestScore)) {
+    bestScoreElement.innerHTML = "Best score: " + bestScore;
+    bestScoreElement.style.visibility = "initial";
+}
 
 // Function to handle flipping of cards
 function flipCard({target: clickedCard}) {
+    // increment score counter
+    score++;
+    // show updated score on page
+    scoreElement.innerHTML = "Score: " + score;
     // Check if the clicked card is not already flipped and the deck is not disabled
     if (cardOne !== clickedCard && !disableDeck) {
         // Add the "flip" class to the clicked card
@@ -49,42 +62,70 @@ function matchCards(img1, img2) {
         // If all cards are matched, shuffle the cards after 1.3s
         if (matched === 8) {
             setTimeout(() => {
+                cards.forEach(card => {
+                    // make the card visible
+                    card.classList.remove("invisible");
+                });
+            }, 300);
+
+            setTimeout(() => {
+                if (!isNaN(bestScore) && bestScore>0)
+                    bestScore =  bestScore > score ? score : bestScore;
+                else
+                    bestScore = score;
+                sessionStorage.setItem("best-score", bestScore.toString());
+                bestScoreElement.innerHTML = "Best score: " + bestScore;
+                bestScoreElement.style.visibility = "initial";
                 return shuffleCard();
             }, 1300);
+        } else {
+            // Remove the click event listeners from the matched cards
+            cardOne.removeEventListener("click", flipCard);
+            cardTwo.removeEventListener("click", flipCard);
+
+            setTimeout(() => {
+                // Add the 'invisible' class to make the cards disappear
+                cardOne.classList.add("invisible");
+                cardTwo.classList.add("invisible");
+            }, 600);
+
+            setTimeout(() => {
+                // Reset cardOne and cardTwo
+                cardOne = cardTwo = "";
+
+                // Enable the deck and exit the function
+                return disableDeck = false;
+            }, 630);
         }
 
-        // Remove the click event listeners from the matched cards
-        cardOne.removeEventListener("click", flipCard);
-        cardTwo.removeEventListener("click", flipCard);
 
-        // Reset cardOne and cardTwo
-        cardOne = cardTwo = "";
+    } else {
+        // If the flipped cards do not match wait for 400ms
+        setTimeout(() => {
+            // add shake animation to cards
+            cardOne.classList.add("shake");
+            cardTwo.classList.add("shake");
+        }, 400);
 
-        // Enable the deck and exit the function
-        return disableDeck = false;
+        // wait for 1.2s
+        setTimeout(() => {
+            // Remove the shake animation and flip the cards back
+            cardOne.classList.remove("shake", "flip");
+            cardTwo.classList.remove("shake", "flip");
+            // Reset cardOne and cardTwo
+            cardOne = cardTwo = "";
+            // Enable the deck
+            disableDeck = false;
+        }, 1200);
     }
 
-    // If the flipped cards do not match wait for 400ms
-    setTimeout(() => {
-        // add shake animation to cards
-        cardOne.classList.add("shake");
-        cardTwo.classList.add("shake");
-    }, 400);
 
-    // wait for 1.2s
-    setTimeout(() => {
-        // Remove the shake animation and flip the cards back
-        cardOne.classList.remove("shake", "flip");
-        cardTwo.classList.remove("shake", "flip");
-        // Reset cardOne and cardTwo
-        cardOne = cardTwo = "";
-        // Enable the deck
-        disableDeck = false;
-    }, 1200);
 }
 
 // Function to shuffle the cards
 function shuffleCard() {
+    score = 0;
+    scoreElement.innerHTML = "Score: " + score;
     // Reset variables and initialize an array with card pairs
     // set matched to 0
     matched = 0;

@@ -639,6 +639,17 @@ footer {
     transform: rotateY(180deg); /* Rotate front view */
 }
 
+/* CSS class that sets the opacity of an element to 0 */
+.invisible {
+    opacity: 0; /* Set the opacity to 0 to make the element fully transparent */
+    transition: opacity 0.5s ease-in-out; /* Animate the opacity change over 0.5 seconds */
+}
+
+/* CSS class that sets the visibility of an element to hidden with the id "best-score" */
+#best-score {
+    visibility: hidden;
+}
+
 /* Media queries for responsive design */
 
 /*========== tiny mobile ==========*/
