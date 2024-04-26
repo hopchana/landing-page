@@ -30,9 +30,9 @@ body {
 }
 
 /* Targets images inside elements with the id "above-the-fold", the element with the id "all-routes-btn",
-elements with the class "more-info-btn", the element with the id "submit-btn", i elements,
+elements with the class "more-info-btn", the input elements with the id "submit-btn" and "reset-btn", i elements,
 anchor elements inside nav elements, body element */
-#above-the-fold img, #all-routes-btn, .more-info-btn, input#submit-btn, i, nav a, body {
+#above-the-fold img, #all-routes-btn, .more-info-btn, input#submit-btn, input#reset-btn, i, nav a, body {
     transition: 0.4s; /* Adds a smooth transition effect for all property changes over 0.4 seconds */
 }
 
@@ -167,9 +167,8 @@ i:hover {
     min-width: 88px;
 }
 
-/* Targets "long-desc" textarea and the input with the id "submit-btn"*/
-#long-desc, input#submit-btn {
-
+/* Targets "long-desc" textarea and the inputs with the id "submit-btn" and "reset-btn"*/
+#long-desc, input#submit-btn, input#reset-btn {
     max-width: 750px; /* sets maximum width to 750px */
 }
 
@@ -189,8 +188,8 @@ i:hover {
 }
 
 /*  Styles front and back views of cards, all img elements, elements with the class "footer-wrapper",
-the element with the id "submit-btn", "long-desc" and "short-desc" textareas */
-.card .view, input#submit-btn, .footer-wrapper, #long-desc, #short-desc, img {
+the inputs with the id "submit-btn" and "reset-btn", "long-desc" and "short-desc" textareas */
+.card .view, input#submit-btn, input#reset-btn, .footer-wrapper, #long-desc, #short-desc, img {
     width: 100%; /* Set width to 100% of containing block */
 }
 
@@ -234,8 +233,8 @@ input#distance {
     border: rgb(118, 118, 118) solid 1px;
 }
 
-/* Targets the element with the id "submit-btn" */
-input#submit-btn {
+/* Targets the inputs with the id "submit-btn" and "reset-btn" */
+input#submit-btn, input#reset-btn {
 
     background: none; /* Sets the background color to none */
     /* Set the border line-color to var(--text-color), line-width to 1px and line-style to solid*/
@@ -335,8 +334,8 @@ img elements within elements with the class "article-section", nav elements */
     padding-right: 0.5em;
 }
 
-/* Targets elements with the class "more-info-btn", elements with id "all-routes-btn" and "submit-btn" on hover*/
-.more-info-btn:hover, #all-routes-btn:hover, #submit-btn:hover {
+/* Targets elements with the class "more-info-btn", elements with id "all-routes-btn", "submit-btn" and "reset-btn" on hover*/
+.more-info-btn:hover, #all-routes-btn:hover, #submit-btn:hover, #reset-btn:hover {
     transform: scale(0.95); /* Scales the button down to 95% on hover */
 }
 

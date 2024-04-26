@@ -16,9 +16,9 @@ const selectedIcon = localStorage.getItem("selected-icon");
 const getCurrentTheme = () =>
     document.body.classList.contains(darkTheme) ? "dark" : "light";
 
-// Function to get the current icon based on the presence of specific class on the theme button
+// Function to get the icon of the theme button based on the current theme
 const getCurrentIcon = () =>
-    themeButton.classList.contains(iconTheme) ? "bx-toggle-left" : "bx-toggle-right";
+    themeButton.classList.contains(iconTheme) ? iconTheme : "bx-toggle-right";
 
 // Apply previously selected theme and icon to the webpage by adding or removing the corresponding classes
 if (selectedTheme) {
@@ -114,12 +114,15 @@ footer.innerHTML = `<div class="footer-wrapper">
 // Update the year dynamically
 document.getElementById("year").innerHTML = new Date().getFullYear().toString();
 
-// Function to navigate to a page
+// Function takes a pageUrl as input and navigates the browser window to the specified URL
 function navigateToPage(pageUrl) {
+    // make the browser window to navigate to the specified URL
     window.location.href = pageUrl;
 }
 
-// Function to generate more info for a specific route
+// Function to generate more information for a specific route
+// by redirecting the user to a new page with the route name as a query parameter
 function generateMoreInfo(name) {
+    // redirect user to the new page with the specified route name as a query parameter
     window.location.href = `more-info.html?name=${name}`;
 }
