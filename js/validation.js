@@ -81,13 +81,15 @@ function submitForm() {
         // indicate that the form has not passed validation
         isOK=false;
     }  else {
-        if (shortDesc.trim().length < 100) {
+        // check if length of short description if less than 100
+        if (shortDesc.length < 100) {
             // add information, that short description should not be shorter than 100 symbols, to alert message
             alertText+="\nShort description should not be shorter than 100 symbols.";
             // indicate that the form has not passed validation
             isOK=false;
         }
-        if (longDesc.trim().length < 500) {
+        // check if length of long description if less than 500
+        if (longDesc.length < 500) {
             // add information, that long description should not be shorter than 500 symbols, to alert message
             alertText+="\nLong description should not be shorter than 500 symbols.";
             // indicate that the form has not passed validation
@@ -142,6 +144,19 @@ function updateCounter(counterId, textareaId) {
     let maxLength = textarea.maxLength;
     //  update counter element based on the number of characters in textarea
     counter.innerText = textarea.value.trim() === "" ? `0/${maxLength}` : `${currentLength}/${maxLength}`;
-    // Change counter color based on character limit
+    // Change counter color to red when only 1/5 of the characters, that user can provide, left
     counter.style.color = currentLength >= (maxLength / 1.25).toFixed(0) ? 'red' : 'gray';
+}
+
+// Event listener for window resize
+window.addEventListener('resize', areaAutoSize);
+
+// Function to auto-adjust the width of textarea elements based on window resize
+function areaAutoSize() {
+    // Get references to the long and short description textarea elements
+    let longD = document.getElementById("long-desc");
+    let shortD = document.getElementById("short-desc");
+    // Set the width of the long and short description textarea elements to 100%
+    longD.style.width='100%';
+    shortD.style.width='100%';
 }

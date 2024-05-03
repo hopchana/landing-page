@@ -21,6 +21,8 @@
 <!-- Navigation menu -->
 <nav id="sidenav">
     <!-- Button to close side navigation menu -->
+    <!-- prevent the link from navigating to a new page or reloading the current page when clicked-->
+    <!-- to allow closeNav() to run without any interference from the browser's default link behavior-->
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
     <!-- Navigation links -->
     <a href="index.html">Home</a>
@@ -98,8 +100,9 @@
             <!-- Checkbox for accepting terms of use and privacy policy -->
             <label for="accept"><input type="checkbox" id="accept" required> I accept the Terms of Use & Privacy Policy</label>
             <div>
-            <!-- Submit button -->
+                <!-- Submit button -->
                 <input id="submit-btn" type="submit">
+                <!-- Reset button -->
                 <input id="reset-btn" type="reset">
             </div>
 
@@ -113,24 +116,12 @@
 <footer id="footer"></footer>
 
 <!-- JavaScript files -->
+<!-- main script (footer, dark theme) -->
 <script src="js/script.js"></script>
+<!-- script for navigation -->
 <script src="js/sidenav.js"></script>
-<script src="js/walidation.js"></script>
-<!-- JavaScript code to auto-adjust the width of textarea elements based on window resize -->
-<script>
-    // Event listener for window resize
-    window.addEventListener('resize', areaAutoSize);
-
-    // Function to auto-adjust textarea width
-    function areaAutoSize() {
-        // Get references to the long and short description textarea elements
-        let longD = document.getElementById("long-desc");
-        let shortD = document.getElementById("short-desc");
-        // Set the width of the long and short description textarea elements to 100%
-        longD.style.width='100%';
-        shortD.style.width='100%';
-    }
-</script>
+<!-- script to validate the form -->
+<script src="js/validation.js"></script>
 
 </body>
 </html>

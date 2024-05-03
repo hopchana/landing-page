@@ -1,16 +1,24 @@
 /*===== VARIABLES CSS =====*/
 :root {
+    /* body background color */
     --body-color: #e7e5dd;
+    /* color for lighter text elements (non-hovered nav, footer options, heart stroke) */
     --light: #999990;
+    /* color for darker text elements (footer columns headings, hovered footer options, heart, border) */
     --dark: #7c7c75;
+    /* text color */
     --text-color: #56514B;
 }
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+    /*body background color*/
     --body-color: #302e28;
+    /* color for darker text elements (non-hovered nav, footer options, heart stroke) */
     --light: #999990;
+    /* color for lighter text elements (footer columns headings, hovered footer options, heart, border) */
     --dark: #bdbbad;
+    /* text color */
     --text-color: #beb8b1;
 }
 
@@ -187,9 +195,9 @@ i:hover {
     right: 10px; /* Position the element 10px from the right edge of its containing block */
 }
 
-/*  Styles front and back views of cards, all img elements, elements with the class "footer-wrapper",
+/*  Styles front and back views of cards, all img elements,
 the inputs with the id "submit-btn" and "reset-btn", "long-desc" and "short-desc" textareas */
-.card .view, input#submit-btn, input#reset-btn, .footer-wrapper, #long-desc, #short-desc, img {
+.card .view, input#submit-btn, input#reset-btn, #long-desc, #short-desc, img {
     width: 100%; /* Set width to 100% of containing block */
 }
 
@@ -468,53 +476,48 @@ footer {
     border-top: var(--light) 1px solid;
 }
 
-/* Targets div elements inside elements with the class "link-columns" */
-.link-columns>div {
+/* Targets div elements inside elements with the class "footer-columns" */
+.footer-columns>div {
     display: flex; /* Sets the display property to flex */
     gap: 2rem;/* Sets the gap between flex items to 2em*/
 }
 
-/* Targets ul elements inside elements with the class "link-columns" */
-.link-columns ul {
+/* Targets ul elements inside elements with the class "footer-columns" */
+.footer-columns ul {
     list-style-type: none; /* Removes default list styling */
     font-weight: 600; /* Sets the font weight to 600*/
 }
 
-/* Targets anchor elements inside ul elements inside elements with the class "link-columns"*/
-.link-columns ul a {
+/* Targets anchor elements inside ul elements inside elements with the class "footer-columns"*/
+.footer-columns ul a {
     color: var(--light); /* Sets the text color using var(--light), so it will change with theme change */
     text-decoration: none; /* Removes underline from links */
     transition: 0.2s; /* Adds 0.2s transition effect for color changes on hover */
 }
 
-/* Targets li elements inside ul elements inside elements with the class "link-columns" */
-.link-columns ul li {
+/* Targets li elements inside ul elements inside elements with the class "footer-columns" */
+.footer-columns ul li {
     padding-bottom: 1rem; /* Adds 1rem padding below list items */
 }
 
-/* Targets elements with the class "footer-bottom", h3 elements inside elements with the class "link-columns",
- anchor elements inside ul elements inside elements with the class "link-columns" on hover*/
-.footer-bottom, .link-columns h3, .link-columns ul a:hover {
+/* Targets elements with the class "footer-bottom", h3 elements inside elements with the class "footer-columns",
+ anchor elements inside ul elements inside elements with the class "footer-columns" on hover*/
+.footer-bottom, .footer-columns h3, .footer-columns ul a:hover {
     color: var(--dark); /* Changes text color on hover using var(--dark), so it will change with theme change */
 }
 
-/* Targets h3 elements inside elements with the class "link-columns" */
-.link-columns h3 {
+/* Targets h3 elements inside elements with the class "footer-columns" */
+.footer-columns h3 {
     margin-bottom: 1.5rem; /* Sets bottom margin to 1.5rem */
 }
 
 /* Targets elements with the class "footer-bottom" */
 .footer-bottom {
-    margin-top: 4rem; /* Sets top margin to 4rem */
+    padding: 1.5rem 1rem 2.5rem; /* Sets padding on top to 1.5rem, bottom to 2.5rem, right and left to 1rem */
 }
 
-/* Targets elements with the class "footer-bottom-wrapper" */
-.footer-bottom-wrapper {
-    padding: 0 1rem 2.5rem; /* Sets padding */
-}
-
-/* Targets elements with the class "link-columns" */
-.link-columns {
+/* Targets elements with the class "footer-columns" */
+.footer-columns {
     width: 80%; /* Sets width to 80% of its containing block*/
     /* Centers horizontally */
     margin-left: auto;
@@ -696,8 +699,8 @@ footer {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /* six equal rows */
     }
 
-    /* Targets elements with the class "link-columns" */
-    .link-columns {
+    /* Targets elements with the class "footer-columns" */
+    .footer-columns {
 
         width: 90%; /* Sets width to 90% of its containing block */
         /* Sets grid template columns and rows */
@@ -851,8 +854,8 @@ footer {
         letter-spacing: 0.1rem; /* Sets letter spacing to 0.1rem */
     }
 
-    /* Targets elements with the class "link-columns" */
-    .link-columns {
+    /* Targets elements with the class "footer-columns" */
+    .footer-columns {
         width: 80%; /* Sets width to 80% of its containing block */
         /* Centers horizontally */
         margin-left: auto;

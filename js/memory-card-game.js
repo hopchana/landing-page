@@ -21,14 +21,16 @@ if (!isNaN(bestScore)) {
 
 // Function to handle flipping of cards
 function flipCard({target: clickedCard}) {
-    // increment score counter
-    score++;
-    // show updated score on page
-    scoreElement.innerHTML = "Score: " + score;
+
     // Check if the clicked card is not already flipped and the deck is not disabled
     if (cardOne !== clickedCard && !disableDeck) {
         // Add the "flip" class to the clicked card
         clickedCard.classList.add("flip");
+
+        // increment score counter
+        score++;
+        // show updated score on page
+        scoreElement.innerHTML = "Score: " + score;
 
         // If cardOne is not set, assign it to the clicked card
         if (!cardOne) {
@@ -76,12 +78,14 @@ function matchCards(img1, img2) {
             cardOne.removeEventListener("click", flipCard);
             cardTwo.removeEventListener("click", flipCard);
 
+            //after 600ms delay
             setTimeout(() => {
                 // Add the 'invisible' class to make the cards disappear
                 cardOne.classList.add("invisible");
                 cardTwo.classList.add("invisible");
             }, 600);
 
+            //after 630ms delay
             setTimeout(() => {
                 // Reset cardOne and cardTwo
                 cardOne = cardTwo = "";
@@ -90,8 +94,6 @@ function matchCards(img1, img2) {
                 return disableDeck = false;
             }, 630);
         }
-
-
     } else {
         // If the flipped cards do not match wait for 400ms
         setTimeout(() => {
@@ -111,8 +113,6 @@ function matchCards(img1, img2) {
             disableDeck = false;
         }, 1200);
     }
-
-
 }
 
 // Function to shuffle the cards
@@ -146,7 +146,6 @@ function shuffleCard() {
         card.classList.remove("flip");
         // make the card visible
         card.classList.remove("invisible");
-
         // variable that allows to directly manipulate the image source of each card
         let imgTag = card.querySelector(".back-view img");
         // set the src attribute of the image based on the shuffled array arr
@@ -158,8 +157,3 @@ function shuffleCard() {
 
 // Call the shuffleCard function to initialize the game for the first time
 shuffleCard();
-
-// Add event listeners to each card to handle flipping
-cards.forEach(card => {
-    card.addEventListener("click", flipCard);
-});

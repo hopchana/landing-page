@@ -21,6 +21,8 @@
 <!-- Navigation menu -->
 <nav id="sidenav">
     <!-- Button to close side navigation menu -->
+    <!-- prevent the link from navigating to a new page or reloading the current page when clicked-->
+    <!-- to allow closeNav() to run without any interference from the browser's default link behavior-->
     <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
     <!-- Navigation links -->
     <a href="index.html">Home</a>
@@ -40,9 +42,13 @@
 <footer id="footer"></footer>
 
 <!-- JavaScript files -->
+<!-- main script (footer, dark theme) -->
 <script src="js/script.js"></script>
+<!-- script for navigation -->
 <script src="js/sidenav.js"></script>
+<!-- script with routes array -->
 <script src="js/routes.js"></script>
+<!-- script to create favorite route card -->
 <script src="js/fav-route-card.js"></script>
 </body>
 </html>

@@ -1,7 +1,12 @@
+<!-- Heading -->
 <h1 class="more-info">Salar De Uyuni, Bolivia</h1>
+<!-- Main image -->
 <img src="img/salar-de-uyuni/salar-de-uyuni.jpg" alt="Desert">
+<!-- Information about start point -->
 <h3>Start: Uyuni</h3>
+<!-- Information about end point -->
 <h3>End: Sabaya</h3>
+<!-- Information about distance -->
 <h3>Distance: 186 miles (300km)</h3>
 
 <p>
@@ -15,41 +20,48 @@ This journey can only be undertaken in Bolivia’s winter, as during summer the 
 </p>
 <br>
 
+<!-- Images section -->
 <article class="more-info-images">
-        <div class="more-info-img">
-                <img
-                    src="img/salar-de-uyuni/salar-de-uyuni-1.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/salar-de-uyuni/salar-de-uyuni-2.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/salar-de-uyuni/salar-de-uyuni-3.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/salar-de-uyuni/salar-de-uyuni-4.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/salar-de-uyuni/salar-de-uyuni-5.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                  <img
-                      src="img/salar-de-uyuni/salar-de-uyuni-6.jpg"
-                      alt="Desert"
-                  >
-          </div>
+    <!-- First image -->
+    <div class="more-info-img">
+        <img
+            src="img/salar-de-uyuni/salar-de-uyuni-1.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Second image -->
+    <div class="more-info-img">
+        <img
+            src="img/salar-de-uyuni/salar-de-uyuni-2.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Third image -->
+    <div class="more-info-img">
+        <img
+            src="img/salar-de-uyuni/salar-de-uyuni-3.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Fourth image -->
+    <div class="more-info-img">
+        <img
+            src="img/salar-de-uyuni/salar-de-uyuni-4.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Fifth image -->
+    <div class="more-info-img">
+        <img
+            src="img/salar-de-uyuni/salar-de-uyuni-5.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Sixth image -->
+    <div class="more-info-img">
+        <img
+          src="img/salar-de-uyuni/salar-de-uyuni-6.jpg"
+          alt="Desert"
+        >
+      </div>
 </article>

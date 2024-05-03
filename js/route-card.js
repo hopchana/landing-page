@@ -2,7 +2,7 @@
 const articleSectionsContainer = document.getElementById('all-routes');
 
 // Loop through the routes array and generate HTML for each section
-routes.forEach((record, index) => {
+routes.forEach((record) => {
     // Generate HTML for each section dynamically
     const sectionHTML = `
         <!-- container for route brief information and image -->
@@ -21,6 +21,7 @@ routes.forEach((record, index) => {
                         <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/>
                         </svg>
+                    <!-- end of the like button -->
                     </button>
                 </div>
                 <!-- Bolder text for the starting point of the route -->
@@ -31,9 +32,11 @@ routes.forEach((record, index) => {
                 <br><b>Distance:</b> ${record.distance}
                 <!-- Regular text for short description of the route -->
                 <br>${record.about}
+            <!-- end of the section with brief information about route and like button -->
             </div>
             <!-- Button to open more information about the route-->
             <button class="more-info-btn center" onclick="generateMoreInfo('${record.id}')">More</button>
+        <!-- end of the container for route brief information and image -->
         </article>
     `;
 

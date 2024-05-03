@@ -1,7 +1,12 @@
+<!-- Heading -->
 <h1 class="more-info">Southern Namibia</h1>
+<!-- Main image -->
 <img src="img/namibia/namibia.jpg" alt="Desert">
+<!-- Information about start point -->
 <h3>Start: Windhoek</h3>
+<!-- Information about end point -->
 <h3>End: Felix Unite</h3>
+<!-- Information about distance -->
 <h3>Distance: 621 miles (1000km)</h3>
 
 <p>
@@ -12,41 +17,48 @@ A seven-day, 621-mile (1000km) unsupported pedal through this astonishing landsc
 </p>
 <br>
 
+<!-- Images section -->
 <article class="more-info-images">
-        <div class="more-info-img">
-                <img
-                    src="img/namibia/namibia-1.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/namibia/namibia-2.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/namibia/namibia-3.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/namibia/namibia-4.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                <img
-                    src="img/namibia/namibia-5.jpg"
-                    alt="Desert"
-                >
-        </div>
-        <div class="more-info-img">
-                  <img
-                      src="img/namibia/namibia-6.jpg"
-                      alt="Desert"
-                  >
-          </div>
+    <!-- First image -->
+    <div class="more-info-img">
+        <img
+            src="img/namibia/namibia-1.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Second image -->
+    <div class="more-info-img">
+        <img
+            src="img/namibia/namibia-2.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Third image -->
+    <div class="more-info-img">
+        <img
+            src="img/namibia/namibia-3.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Fourth image -->
+    <div class="more-info-img">
+        <img
+            src="img/namibia/namibia-4.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Fifth image -->
+    <div class="more-info-img">
+        <img
+            src="img/namibia/namibia-5.jpg"
+            alt="Desert"
+        >
+    </div>
+    <!-- Sixth image -->
+    <div class="more-info-img">
+        <img
+          src="img/namibia/namibia-6.jpg"
+          alt="Desert"
+        >
+      </div>
 </article>
