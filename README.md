@@ -1,2 +1,2 @@
 URL: 
-http://world-on-wheels.zzz.com.ua/
+http://world-on-wheels.wuaze.com/
